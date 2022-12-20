@@ -65,13 +65,13 @@
     <style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
 .CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
 .CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
-.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:#042722;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
 </style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
 .CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
 .CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
 .CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
 .CtxtMenu_MenuClose:hover:focus {  outline:none}
-</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:#042722;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
 .CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
 .CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
 .CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
@@ -98,7 +98,7 @@
 .CtxtMenu_SelectionItem {  padding-right: 1em;}
 .CtxtMenu_Selection {  right: 40%; width:50%; }
 .CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
-.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #042722;}
 .CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
 </style><style id="MJX-CHTML-styles">
 mjx-container[jax="CHTML"] {
@@ -459,21 +459,13 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
     </div>
     
 
+<!-- --------------------------------------------------------------------------------------------------- -->
 
-
-    <div class="wrapper">
-        <div class="navbar container">
-            <a id="author-name" class="alignable pull-left" href="https://thaonguyen217.github.io/">Thao Nguyen</a>
-            <!-- <ul id="navlist" class="alignable pull-right navbar-ul">                    
-              <li class="alignable pull-left nav-list"><a href="https://quanghuy0497.github.io/">About me</a></li>
-              <li class="alignable pull-left nav-list"><a href="https://quanghuy0497.github.io/page/research">Research</a></li>
-              <li class="alignable pull-left nav-list"><a href="https://quanghuy0497.github.io/page/projects">Projects</a></li>
-              <li class="alignable pull-left nav-list"><a href="https://quanghuy0497.github.io/page/courses">Relevant Courses</a></li>
-              <li class="alignable pull-left nav-list"><a href="https://quanghuy0497.github.io/page/blog">Blogs</a></li>
-              <li class="alignable pull-left nav-list"><a href="https://quanghuy0497.github.io/page/hobby">Hobbies</a></li>    
-            </ul> -->
+    <div class="wrapper"; style="color: #042722; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 14px;">
+        <div class="navbar container"; style="background-image: url('https://github.com/thaonguyen217/thaonguyen217.github.io/blob/master/css_files/bg.jpg');">
+          <center><h1>Thao Nguyen</h1></center>
         </div>
-        <div style="clear:both"></div>
+        <!-- <div style="clear:both"></div> -->
         <hr>
             <div class="container content">
         
@@ -551,7 +543,7 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
                 
                     <hr>
                     <p style="text-align: center; margin-bottom: 10px">
-                    <a href="https://github.com/quanghuy0497" style="color: black"><small></small></a>
+                    <a href="https://github.com/quanghuy0497" style="color: #042722"><small></small></a>
                     </p>
                 
             </div>
@@ -561,8 +553,8 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
 <footer>
     
 <center>
-    <p style="color:#ff7f50; font-size:14px; line-height:0em">
-        <b><i>“Where there's a will, there's a way.”<i></i></i></b></p><i><i>
+    <p style="color:#ff7f50; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:13px; line-height:0em">
+        <i>“Where there's a will, there's a way.”<i></i></i></p><i><i>
           <br>
 </i></i></center><i><i>
 
