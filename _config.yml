@@ -9,7 +9,7 @@ version: 2
 name: Thao Nguyen
 title: Incoming PhD student - UIUC
 email: thaotn2@illinois.edu
-website: www.github.com/thaonguyen217/thaonguyen217.github.io
+# website: www.github.com/thaonguyen217/thaonguyen217.github.io
 
 # Dark Mode (true/false/never)
 darkmode: true
