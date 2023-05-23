@@ -93,12 +93,12 @@ content:
   - title: Publication # Title for the section
     layout: text # Type of content section (list/text)
     content: |
-      [6] Dat T. Ngo, Thao Nguyen , Hieu T. Nguyen, Dung B. Nguyen, Ha Q. Nguyen, Hieu H. Pham. Slice-level Detection of Intracranial Hemorrhage on CT Using Deep Descriptors of Adjacent Slices. 2023 IEEE Statistical Signal Processing Workshop (SSP), 2023.  
-      [5] Thao Nguyen, Hieu H. Pham, Khiem H. Le, Anh Tu Nguyen, Tien Thanh, Cuong Do. Detecting COVID-19 from digitized ECG printouts using 1D convolutional neural networks. PLOS ONE, 2022.  
-      [4] Thao Nguyen, Tam M. Vo, Thang V. Nguyen, Hieu H. Pham, Ha Q. Nguyen. Learning to diagnose common thorax diseases on chest radiographs from radiology reports in Vietnamese. PLOS ONE, 2022.  
-      [3] Thao Nguyen, Anh Tu Nguyen, Khiem H. Le, Hieu H. Pham, Cuong Do. A novel deep learning-based approach for sleep apnea detection using single-lead ECG signals. APSIPA ASC - 2022, 2022.  
-      [2] Khiem H. Le, Hieu H. Pham, Thao Nguyen, Tu A. Nguyen, Tien N. Thanh, Cuong Do. LightX3ECG: A Lightweight and eXplainable Deep Learning System for 3-lead Electrocardiogram Classification. Biomedical Signal Processing and Control, 2022.  
-      [1] Khiem H. Le, Hieu H. Pham, Thao Nguyen, Tu A. Nguyen, Cuong Do. Enhancing deep learning based 3-lead ECG classification with heartbeat counting and demographic data integration. IECBES 2022, 2022.
+      [6] Dat T. Ngo, <b>Thao Nguyen</b> , Hieu T. Nguyen, Dung B. Nguyen, Ha Q. Nguyen, Hieu H. Pham. [Slice-level Detection of Intracranial Hemorrhage on CT Using Deep Descriptors of Adjacent Slices](https://arxiv.org/abs/2208.03403). <i>2023 IEEE Statistical Signal Processing Workshop (SSP)</i>, 2023.  
+      [5] <b>Thao Nguyen</b>, Hieu H. Pham, Khiem H. Le, Anh Tu Nguyen, Tien Thanh, Cuong Do. [Detecting COVID-19 from digitized ECG printouts using 1D convolutional neural networks](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0277081). PLOS ONE, 2022.  
+      [4] <b>Thao Nguyen</b>, Tam M. Vo, Thang V. Nguyen, Hieu H. Pham, Ha Q. Nguyen. [Learning to diagnose common thorax diseases on chest radiographs from radiology reports in Vietnamese](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0276545)`. PLOS ONE, 2022.  
+      [3] <b>Thao Nguyen</b>, Anh Tu Nguyen, Khiem H. Le, Hieu H. Pham, Cuong Do. [A novel deep learning-based approach for sleep apnea detection using single-lead ECG signals](https://www.researchgate.net/publication/362568235_A_novel_deep_learning-based_approach_for_sleep_apnea_detection_using_single-lead_ECG_signals). APSIPA ASC - 2022, 2022.  
+      [2] Khiem H. Le, Hieu H. Pham, <b>Thao Nguyen</b>, Tu A. Nguyen, Tien N. Thanh, Cuong Do. [LightX3ECG: A Lightweight and eXplainable Deep Learning System for 3-lead Electrocardiogram Classification](https://www.researchgate.net/publication/362169587_LightX3ECG_A_Lightweight_and_eXplainable_Deep_Learning_System_for_3-lead_Electrocardiogram_Classification). Biomedical Signal Processing and Control, 2022.  
+      [1] Khiem H. Le, Hieu H. Pham, <b>Thao Nguyen</b>, Tu A. Nguyen, Cuong Do. [Enhancing deep learning based 3-lead ECG classification with heartbeat counting and demographic data integration](https://www.researchgate.net/publication/362706895_Enhancing_Deep_Learning-based_3-lead_ECG_Classification_with_Heartbeat_Counting_and_Demographic_Data_Integration). IECBES 2022, 2022.
 
   - title: A Little More About Me
     layout: text
