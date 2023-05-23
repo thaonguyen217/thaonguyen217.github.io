@@ -1,6 +1,6 @@
 # Site
 repository: thaonguyen217/thaonguyen217.github.io
-favicon: images/favicon.ico
+favicon: images/favicon.png
 
 # Content configuration version
 version: 2
@@ -57,8 +57,8 @@ content:
     layout: list # Type of content section (list/text)
     content:
       - layout: top-middle
-        title: Super awesome project
-        link: github.com/sproogen
+        title: my personal webpage
+        link: github.com/thaonguyen217
         # link_text: Project Website
         additional_links:
           - title:  thaonguyen217/thaonguyen217.github.io
