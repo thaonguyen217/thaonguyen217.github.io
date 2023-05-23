@@ -105,14 +105,15 @@ content:
   - title: A Little More About Me
     layout: text
     content: | # this will include new lines to allow paragraphs
-      Alongside my interests in networks and software engineering some of my other interests and hobbies are:
-      - Rock climbing
-      - Gaming
-      - Knitting
-      - [Becoming a ninja](https://www.youtube.com/watch?v=vtg4o__aRMg)
+      Alongside my interests in research work some of my other interests and hobbies are:
+      - Playing table tennis
+      - Traveling
+      - Photography
+      - Drawing
+      - Graphic design
 
       Look at this cool image  
-      ![Trees](/modern-resume-theme/images/landscape-trees.jpg "Trees")
+      ![Trees](/thaonguyen217.github.io/images/landscape-trees.jpg "Trees")
 
 # Footer
 footer_show_references: true
