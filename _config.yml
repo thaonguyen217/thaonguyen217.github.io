@@ -91,7 +91,7 @@ content:
             I started a new job at [VinBigdata](https://smarthealth.vinuni.edu.vn/) as a research assistant
 
   - title: Publication # Title for the section
-    layout: text # Type of content section (list/text)
+    layout: list # Type of content section (list/text)
     content: |
       [6] abc
       [5] xyz
