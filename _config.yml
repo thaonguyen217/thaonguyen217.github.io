@@ -25,7 +25,7 @@ linkedin_username: papaya3781
 # xing_username: jekyll
 # pinterest_username: jekyll
 # googleplus_username: +jekyll
-# orcid_username: 0000-0000-0000-0000
+orcid_username: 0000-0000-0000-0000
 
 # Additional icon links
 additional_links:
@@ -46,31 +46,31 @@ additional_links:
 # about_title: About Me
 about_profile_image: images/profile.jpeg
 about_content: | # this will include new lines to allow paragraphs
-  I am currently a research assistant at the VinUni-Illinois Smart Health Center (VISHC), VinUniversity. My research focuses on developing deep learning algorithms to detect cardiovascular diseases using ECG signals.
-  I received my BSc degree in Electrical Engineering from Hanoi University of Science and Technology (HUST) in late 2020.
+  Hi there, I'm Thao. Starting in August, I will begin my PhD studies at the University of Illinois at Urbana-Champaign under the guidance of Prof. Heng Ji.
 
+  I received my BSc degree in Electrical Engineering from Hanoi University of Science and Technology (HUST) in late 2020. After graduation, I joined VinBigdata's AI Engineer training program and interned there for a year, working on medical image analysis research. I am currently a research assistant at the VinUni-Illinois Smart Health Center (VISHC), where I am focusing on deep learning algorithms to detect cardiovascular diseases utilizing ECG signals. 
 
-  My research interest: <mark>NLP</mark> and <mark></mark>
+# My research interest: <mark>NLP</mark> and <mark></mark>
 
 content:
-  - title: Projects # Title for the section
-    layout: list # Type of content section (list/text)
+  - title: Research interests # Title for the section
+    # layout: list # Type of content section (list/text)
     content:
-      - layout: top-middle
-        title: my personal webpage
-        link: github.com/thaonguyen217
-        # link_text: Project Website
-        additional_links:
-          - title:  thaonguyen217/thaonguyen217.github.io
-            icon: fab fa-github
-            url: github.com/thaonguyen217/thaonguyen217.github.io
+      # - layout: top-middle
+      #   title: my personal webpage
+      #   link: github.com/thaonguyen217
+      #   # link_text: Project Website
+      #   additional_links:
+      #     - title:  thaonguyen217/thaonguyen217.github.io
+      #       icon: fab fa-github
+      #       url: github.com/thaonguyen217/thaonguyen217.github.io
           # - title:  Github page for project (eg. sproogen/modern-resume-theme)
           #   icon: fab fa-github
           #   url: Link to project (eg. sproogen.github.io/modern-resume-theme)
-        quote: >
-          This is probably one of the greatest apps ever created, if you don't agree you're probably wrong.
+        # quote: >
+        #   This is probably one of the greatest apps ever created, if you don't agree you're probably wrong.
         description: | # this will include new lines to allow paragraphs
-          I started this project as a way if learning <mark>React</mark> and it has since grown into a fully fledged app. I have learned many skills through this and been I'm very proud of having this in my portfolio. If you don't have a project as awesome as this I would advise you make one.
+          Until recently, I have dabbled in a variety of machine learning domains, ranging from signal processing to computer vision to natural language processing. In the future, and as part of my PhD research, I intend to concentrate on <mark>meta-learning</mark> algorithms such as <mark>few-shot learning</mark>, <mark>curriculum learning</mark>, and <mark>active learning</mark>. My research goal is to develop algorithms that can improve convergence speed, be more adaptable to environmental changes, and generalize to a wider range of tasks.
 
   - title: Experience # Title for the section
     layout: list # Type of content section (list/text)
