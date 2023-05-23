@@ -7,12 +7,12 @@ version: 2
 
 # Personal info
 name: Thao Nguyen
-title: Senior Network System Administrator
-email: brett.h@email.co.uk
-website: www.github.com/sproogen/resume-theme
+title: Incoming PhD student - UIUC
+email: thaotn2@illinois.edu
+website: www.github.com/thaonguyen217/thaonguyen217.github.io
 
 # Dark Mode (true/false/never)
-darkmode: false
+darkmode: true
 
 # Social links
 twitter_username: facespics
