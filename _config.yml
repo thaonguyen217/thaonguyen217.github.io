@@ -120,7 +120,7 @@ footer_show_references: true
 references_title: welcome to my world
 
 # Build settings
-remote_theme: thaonguyen217/thaonguyen217.github.io
+remote_theme: sproogen/resume-theme # thaonguyen217/thaonguyen217.github.io
 
 sass:
   sass_dir: _sass
