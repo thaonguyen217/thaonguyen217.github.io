@@ -7,7 +7,7 @@ version: 2
 
 # Personal info
 name: Thao Nguyen
-title: Incoming PhD student - UIUC
+title: Incoming PhD student @ UIUC
 email: thaotn2@illinois.edu
 # website: www.github.com/thaonguyen217/thaonguyen217.github.io
 
@@ -15,17 +15,15 @@ email: thaotn2@illinois.edu
 darkmode: true
 
 # Social links
-twitter_username: facespics
-github_username:  sproogen
+github_username:  thaonguyen217
 # stackoverflow_username: "00000001"
 # dribbble_username: jekyll
 # facebook_username: jekyll
 # flickr_username: jekyll
-instagram_username: jameswgrant
-linkedin_username: jameswgrant
+instagram_username: kaiaya10
+linkedin_username: papaya3781
 # xing_username: jekyll
 # pinterest_username: jekyll
-youtube_username: globalmtb
 # googleplus_username: +jekyll
 # orcid_username: 0000-0000-0000-0000
 
@@ -48,9 +46,11 @@ additional_links:
 # about_title: About Me
 about_profile_image: images/profile.jpeg
 about_content: | # this will include new lines to allow paragraphs
-  Hi, my name's Brett and I'm a senior network system administrator. As well as administrating systems I also have experience making software and web apps. I have worked at a number of companies gaining teamwork and leadership skills.
+  I am currently a research assistant at the VinUni-Illinois Smart Health Center (VISHC), VinUniversity. My research focuses on developing deep learning algorithms to detect cardiovascular diseases using ECG signals.
+  I received my BSc degree in Electrical Engineering from Hanoi University of Science and Technology (HUST) in late 2020.
 
-  I am most skilled in: <mark>AWS</mark> and <mark>Eating Pizza</mark>
+
+  My research interest: <mark>NLP</mark> and <mark></mark>
 
 content:
   - title: Projects # Title for the section
