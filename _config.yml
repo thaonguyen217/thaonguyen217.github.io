@@ -80,15 +80,15 @@ content:
     layout: list # Type of content section (list/text)
     content:
       - layout: left
-        title: Jan 2022 - present
-#         link: boringcompany.com
-        # link_text: boringcompany.com
-#         sub_title: Senior Network System Administrator
-#         caption: November 2017 - Present
-#         quote: >
-#           Solving 21st century problems by diging holes and making game changing products like the *not a flamethrower*
+        title: Start a new work
+        caption: Jan 2022 - present
         description: | # this will include new lines to allow paragraphs
-            I started a new job at VISH
+            I started a new job at [VISHC](https://smarthealth.vinuni.edu.vn/) as a research assistant
+      - layout: left
+        title: Internship
+        caption: Jan 2021 - Dec 2022
+        description: | # this will include new lines to allow paragraphs
+            I started a new job at [VinBigdata](https://smarthealth.vinuni.edu.vn/) as a research assistant
 
   - title: Education # Title for the section
     layout: list # Type of content section (list/text)
