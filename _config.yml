@@ -116,8 +116,8 @@ content:
       ![Trees](/thaonguyen217.github.io/images/landscape-trees.jpg "Trees")
 
 # Footer
-footer_show_references: true
-references_title: welcome to my world
+footer_show_references: false
+# references_title: welcome to my world
 
 # Build settings
 remote_theme: sproogen/resume-theme # thaonguyen217/thaonguyen217.github.io
