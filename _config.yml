@@ -53,6 +53,8 @@ about_content: | # this will include new lines to allow paragraphs
   I received my BSc degree in Electrical Engineering from Hanoi University of Science and Technology (HUST) in late 2020. After graduation, I joined VinBigdata's AI Engineer training program and interned there for a year, working on medical image analysis research. I am currently a research assistant at the VinUni-Illinois Smart Health Center (VISHC), where I am focusing on deep learning algorithms to detect cardiovascular diseases utilizing ECG signals.
 content:
   - title: Research interests # Title for the section
+  layout: text
+  content: |
     Up until now, I have dabbled in a variety of machine learning domains, ranging from signal processing to computer vision to natural language processing. In the future, and as part of my PhD research, I intend to concentrate on <mark>meta-learning</mark> algorithms such as <mark>few-shot learning</mark>, <mark>curriculum learning</mark>, and <mark>active learning</mark>. My research goal is to develop algorithms that can improve convergence speed, be more adaptable to environmental changes, and generalize to a wider range of tasks.
 #     layout: list # Type of content section (list/text)
 #     content:
