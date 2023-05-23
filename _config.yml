@@ -43,7 +43,7 @@ additional_links:
 # google_analytics: "UA-00000000-0"
 
 # About Section
-# about_title: About Me
+about_title: About Me
 about_profile_image: images/profile.jpeg
 about_content: | # this will include new lines to allow paragraphs
   Hi there, I'm Thao. Starting in August, I will begin my PhD studies at the University of Illinois at Urbana-Champaign under the guidance of Prof. Heng Ji.
@@ -72,7 +72,7 @@ content:
         description: | # this will include new lines to allow paragraphs
           Until recently, I have dabbled in a variety of machine learning domains, ranging from signal processing to computer vision to natural language processing. In the future, and as part of my PhD research, I intend to concentrate on <mark>meta-learning</mark> algorithms such as <mark>few-shot learning</mark>, <mark>curriculum learning</mark>, and <mark>active learning</mark>. My research goal is to develop algorithms that can improve convergence speed, be more adaptable to environmental changes, and generalize to a wider range of tasks.
 
-  - title: Experience # Title for the section
+  - title: News # Title for the section
     layout: list # Type of content section (list/text)
     content:
       - layout: left
