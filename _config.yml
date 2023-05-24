@@ -120,7 +120,7 @@ content:
 
 # Footer
 footer_show_references: true
-references_title: Powered by Jekyll & AcademicPages, a fork of Minimal Mistakes.
+references_title:  # Powered by Jekyll & AcademicPages, a fork of Minimal Mistakes.
 
 # Build settings
 remote_theme: sproogen/resume-theme
