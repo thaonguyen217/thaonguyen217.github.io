@@ -56,7 +56,7 @@ content:
   - title: Research interests # Title for the section
     layout: text
     content:
-      Up until now, I have dabbled in a variety of machine learning domains, ranging from signal processing to computer vision to natural language processing. In the future, and as part of my PhD research, I intend to concentrate on meta-learning algorithms such as few-shot learning, curriculum learning, and active learning. My research goal is to develop algorithms that can improve convergence speed, be more adaptable to environmental changes, and generalize to a wider range of tasks.
+      Up until now, I have dabbled in a variety of machine learning domains, ranging from signal processing to computer vision to natural language processing. In the future, and as part of my PhD research, I will concentrate on <mark>meta-learning</mark> algorithms such as <mark>few-shot learning</mark>, <mark>curriculum learning</mark>, and <mark>active learning</mark>. My research goal is to develop algorithms that can improve convergence speed, be more adaptable to environmental changes, and generalize to a wider range of tasks.
 #     layout: list # Type of content section (list/text)
 #     content:
 #       - layout: top-middle
@@ -80,15 +80,20 @@ content:
     layout: list # Type of content section (list/text)
     content:
       - layout: left
-        title: Start a new work
+        title: Research assistant @ VISHC
         caption: Jan 2022 - present
         description: | # this will include new lines to allow paragraphs
-            I started a new job at [VISHC](https://smarthealth.vinuni.edu.vn/) as a research assistant
+            I started working at [VISHC](https://smarthealth.vinuni.edu.vn/) as a research assistant on the ECG signal analysis project.
       - layout: left
-        title: Internship
+        title: Internship @ VinBidata
         caption: Jan 2021 - Dec 2022
         description: | # this will include new lines to allow paragraphs
-            I started a new job at [VinBigdata](https://smarthealth.vinuni.edu.vn/) as a research assistant
+            I started working at Medical Image Processing Department - [VinBigdata JSC](https://vinbigdata.com/en).
+      - layout: left
+        title: Undergrad
+        caption: Dec 2020
+        description: | # this will include new lines to allow paragraphs
+            I received my BSc degree in Electrical Engineering from [HUST](https://hust.edu.vn/).
 
   - title: Publication # Title for the section
     layout: text # Type of content section (list/text)
