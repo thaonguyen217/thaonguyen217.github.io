@@ -116,7 +116,7 @@ content:
       - Graphic design
 
 #       Look at this cool image  
-      ![Drawing](/thaonguyen217.github.io/images/drawing.jpeg "Drawing")
+#      ![Drawing](/thaonguyen217.github.io/images/drawing.jpeg "Drawing")
 
 # Footer
 footer_show_references: true
