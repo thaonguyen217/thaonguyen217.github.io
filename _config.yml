@@ -22,7 +22,7 @@ github_username:  thaonguyen217
 # facebook_username: jekyll
 # flickr_username: jekyll
 instagram_username: papaya3781
-linkedin_username: papaya3781
+# linkedin_username: papaya3781
 # xing_username: jekyll
 # pinterest_username: jekyll
 # youtube_username: globalmtb
@@ -31,9 +31,14 @@ linkedin_username: papaya3781
 
 # Additional icon links
 additional_links:
-- title: itsgoingto.be
-  icon: fas fa-google-scholar# fa-globe
+- title: googlescholar
+  icon: fas fa-google-scholar
   url: https://scholar.google.com/citations?hl=en&user=pJ47-Z4AAAAJ&view_op=list_works&gmla=AILGF5X2PRDxuqeZ2YkuURDld58r86F8_goNS1rTtdYGhL6P99jCICh_-qg3asRHav-Et89pKHhbNd-11DfUmjrO
+
+additional_links:
+  - title: CV
+  icon: fas fa-file
+  url: images/CV_NguyenThiBichThao.pdf
 # - title: another link
 #   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&m=free)
 #   url: Link url (eg. https://google.com)
