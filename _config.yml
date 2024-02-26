@@ -60,11 +60,11 @@ content:
 
     layout: list # Type of content section (list/text)
     content:
-      - layout: top-middle
-        title: Foundation model for molecular representation
-        title: Structure-properties relationship mining
-        title: Physic-informed AI for drug discovery
-        title: Interpretable AI for high fidelity property prediction
+      # - layout: top-middle
+        - title: Foundation model for molecular representation
+        - title: Structure-properties relationship mining
+        - title: Physic-informed AI for drug discovery
+        - title: Interpretable AI for high fidelity property prediction
         # link: github.com/sproogen
         # link_text: Project Website
         # additional_links:
