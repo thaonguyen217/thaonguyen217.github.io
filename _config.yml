@@ -71,11 +71,11 @@ content:
   - title: News # Title for the section
     layout: list # Type of content section (list/text)
     content:
-    - layout: left
-        title: Ph.D. student @ UIUC
-        caption: Aug 2023 - Present
-        description: | # this will include new lines to allow paragraphs
-            Started Ph.D in CS at UIUC
+      - layout: left
+          title: Ph.D. student @ UIUC
+          caption: Aug 2023 - Present
+          description: | # this will include new lines to allow paragraphs
+              Started Ph.D in CS at UIUC
       - layout: left
         title: RA @ VISHC
         caption: Jan 2022 - Jun 2023
