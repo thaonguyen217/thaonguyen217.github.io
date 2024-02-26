@@ -71,7 +71,7 @@ content:
       title: Ph.D. student @ UIUC
       caption: Aug - 2023 Present
       description: | # this will include new lines to allow paragraphs
-          Started Ph.D in CS at BLENDER lab, UIUC
+          Started Ph.D in CS at [BLENDER lab](https://blender.cs.illinois.edu/), UIUC
     - layout: left
       title: RA @ VISHC
       caption: Jan 2022 - Jun 2023
