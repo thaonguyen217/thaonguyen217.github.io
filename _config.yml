@@ -87,21 +87,26 @@ content:
   - title: News # Title for the section
     layout: list # Type of content section (list/text)
     content:
+    - layout: left
+        title: Ph.D. student @ UIUC
+        caption: Aug 2023 - Present
+        description: | # this will include new lines to allow paragraphs
+            Started Ph.D in CS at UIUC
       - layout: left
         title: Research assistant @ VISHC
-        caption: Jan 2022 - present
+        caption: Jan 2022 - Jun 2023
         description: | # this will include new lines to allow paragraphs
-            I started working at [VISHC](https://smarthealth.vinuni.edu.vn/) as a research assistant on the ECG signal analysis project.
+            Started working at [VISHC](https://smarthealth.vinuni.edu.vn/) as a research assistant on the ECG signal analysis project.
       - layout: left
         title: Internship @ VinBidata
         caption: Jan 2021 - Dec 2022
         description: | # this will include new lines to allow paragraphs
-            I started working at Medical Image Processing Department - [VinBigdata JSC](https://vinbigdata.com/en).
+            Started working at Medical Image Processing Department - [VinBigdata JSC](https://vinbigdata.com/en).
       - layout: left
         title: Undergrad
         caption: Dec 2020
         description: | # this will include new lines to allow paragraphs
-            I received my BSc degree in Biomedical Engineering from [HUST](https://hust.edu.vn/).
+            Received BSc degree in Biomedical Engineering from [HUST](https://hust.edu.vn/).
 
   - title: Publication # Title for the section
     layout: text # Type of content section (list/text)
