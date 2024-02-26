@@ -58,13 +58,13 @@ content:
     content:
       My research interests revolve around the application of natural language processing (NLP) and graph neural networks (GNN) to accelerate advancements in <mark>AI for drug discovery</mark>. Specifically, I am drawn to the following areas:
 
-    layout: list # Type of content section (list/text)
-    content:
-        - layout: top-middle
-          Foundation model for molecular representation
-          Structure-properties relationship mining
-          Physic-informed AI for drug discovery
-          Interpretable AI for high fidelity property prediction
+    # layout: list # Type of content section (list/text)
+    # content:
+    #     - layout: top-middle
+    #       Foundation model for molecular representation
+    #       Structure-properties relationship mining
+    #       Physic-informed AI for drug discovery
+    #       Interpretable AI for high fidelity property prediction
         # link: github.com/sproogen
         # link_text: Project Website
         # additional_links:
