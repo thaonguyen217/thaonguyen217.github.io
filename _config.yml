@@ -61,6 +61,7 @@ content:
       - Structure-properties relationship mining
       - Physic-informed AI for drug discovery
       - Interpretable AI for high fidelity property prediction
+      - Autonomous molecular design and synthesis
     # layout: list # Type of content section (list/text)
     # content:
     #     - layout: top-middle
