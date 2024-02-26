@@ -93,7 +93,7 @@ content:
         description: | # this will include new lines to allow paragraphs
             Started Ph.D in CS at UIUC
       - layout: left
-        title: Research assistant @ VISHC
+        title: RA @ VISHC
         caption: Jan 2022 - Jun 2023
         description: | # this will include new lines to allow paragraphs
             Started working at [VISHC](https://smarthealth.vinuni.edu.vn/) as a research assistant on the ECG signal analysis project.
