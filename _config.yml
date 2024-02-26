@@ -32,7 +32,7 @@ linkedin_username: papaya3781
 # Additional icon links
 additional_links:
 - title: googlescholar
-  icon: fab fa-google-scholar
+  icon: fa-brands fa-google-scholar # fas fa-google-scholar
   url: https://scholar.google.com/citations?hl=en&user=pJ47-Z4AAAAJ&view_op=list_works&gmla=AILGF5X2PRDxuqeZ2YkuURDld58r86F8_goNS1rTtdYGhL6P99jCICh_-qg3asRHav-Et89pKHhbNd-11DfUmjrO
 
 # - title: another link
@@ -71,7 +71,7 @@ content:
       title: Ph.D. student @ UIUC
       caption: Aug - 2023 Present
       description: | # this will include new lines to allow paragraphs
-          Started Ph.D in CS at UIUC, join [BLENDER lab](https://blender.cs.illinois.edu/).
+          Started Ph.D in CS at UIUC, joined [BLENDER lab](https://blender.cs.illinois.edu/).
     - layout: left
       title: RA @ VISHC
       caption: Jan 2022 - Jun 2023
