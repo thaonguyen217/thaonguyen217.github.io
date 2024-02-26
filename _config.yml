@@ -7,7 +7,7 @@ version: 2
 
 # Personal info
 name: Thao Nguyen
-title: Incoming PhD student @ UIUC
+title: PhD student @ UIUC
 email: thaotn2@illinois.edu
 # website: www.github.com/sproogen/resume-theme
 
@@ -48,32 +48,36 @@ additional_links:
 # about_title: About Me
 about_profile_image: images/profile.jpeg
 about_content: | # this will include new lines to allow paragraphs
-  Hi there, I'm Thao. Starting in August, I will begin my PhD studies at the University of Illinois at Urbana-Champaign under the guidance of Prof. Heng Ji.
+  Hi there! I'm Thao, currently a first-year Ph.D. student in the Department of Computer Science at the University of Illinois at Urbana Champaign (UIUC). I am fortunate to be advised by Prof. [Heng Ji](https://blender.cs.illinois.edu/hengji.html).
 
-  I received my BSc degree in Electrical Engineering from Hanoi University of Science and Technology (HUST) in late 2020. After graduation, I joined VinBigdata's AI Engineer training program and interned there for a year, working on medical image analysis research. I am currently a research assistant at the VinUni-Illinois Smart Health Center (VISHC), where I am focusing on deep learning algorithms to detect cardiovascular diseases utilizing ECG signals.
+  I completed my BSc degree in Biomedical Engineering at Hanoi University of Science and Technology (HUST) in late 2020. After graduating, I spent a year interning at VinBigdata's Medical Image Processing Department. Following this, I joined the VinUni-Illinois Smart Health Center ([VISHC](https://smarthealth.vinuni.edu.vn/)), where my focus lies in deep learning-based biosignal processing. I am passionate about leveraging advanced computational techniques to accelerate applications in healthcare.
 
 content:
   - title: Research interests # Title for the section
     layout: text
     content:
-      Up until now, I have dabbled in a variety of machine learning domains, ranging from signal processing to computer vision to natural language processing. In the future, and as part of my PhD research, I will concentrate on <mark>meta-learning</mark> algorithms such as <mark>few-shot learning</mark>, <mark>curriculum learning</mark>, and <mark>active learning</mark>. My research goal is to develop algorithms that can improve convergence speed, be more adaptable to environmental changes, and generalize to a wider range of tasks.
-#     layout: list # Type of content section (list/text)
-#     content:
-#       - layout: top-middle
-#         title: Super awesome project
-#         link: github.com/sproogen
-#         # link_text: Project Website
-#         additional_links:
-#           - title:  sproogen/modern-resume-theme
-#             icon: fab fa-github
-#             url: github.com/sproogen/modern-resume-theme
-#           # - title:  Github page for project (eg. sproogen/modern-resume-theme)
-#           #   icon: fab fa-github
-#           #   url: Link to project (eg. sproogen.github.io/modern-resume-theme)
-#         quote: >
-#           This is probably one of the greatest apps ever created, if you don't agree you're probably wrong.
-#         description: | # this will include new lines to allow paragraphs
-#           I started this project as a way if learning <mark>
+      My research interests revolve around the application of natural language processing (NLP) and graph neural networks (GNN) to accelerate advancements in <mark>AI for drug discovery</mark>. Specifically, I am drawn to the following areas:
+
+    layout: list # Type of content section (list/text)
+    content:
+      - layout: top-middle
+        title: Foundation model for molecular representation
+        title: Structure-properties relationship mining
+        title: Physic-informed AI for drug discovery
+        title: Interpretable AI for high fidelity property prediction
+        # link: github.com/sproogen
+        # link_text: Project Website
+        # additional_links:
+        #   - title:  sproogen/modern-resume-theme
+        #     icon: fab fa-github
+        #     url: github.com/sproogen/modern-resume-theme
+        #   # - title:  Github page for project (eg. sproogen/modern-resume-theme)
+        #   #   icon: fab fa-github
+        #   #   url: Link to project (eg. sproogen.github.io/modern-resume-theme)
+        # quote: >
+        #   This is probably one of the greatest apps ever created, if you don't agree you're probably wrong.
+        # description: | # this will include new lines to allow paragraphs
+        #   I started this project as a way if learning <mark>
 # React</mark> and it has since grown into a fully fledged app. I have learned many skills through this and been I'm very proud of having this in my portfolio. If you don't have a project as awesome as this I would advise you make one.
 
   - title: News # Title for the section
