@@ -91,7 +91,7 @@ content:
   - title: Publications # Title for the section
     layout: text # Type of content section (list/text)
     content: |
-      [8] <b>Thao Nguyen</b>, Kuan-Hao Huang, Ge Liu, Martin D. Burke, Ying Diao, Heng Ji. [FARM: Functional Group-Aware Representations for Small Molecules](https://arxiv.org/abs/2410.02082). <i>preprint arXiv:2410.02082</i>, 2024.
+      [8] <b>Thao Nguyen</b>, Kuan-Hao Huang, Ge Liu, Martin D. Burke, Ying Diao, Heng Ji. [FARM: Functional Group-Aware Representations for Small Molecules](https://thaonguyen217.github.io/farm/). <i>preprint arXiv:2410.02082</i>, 2024.
       
       [7] <b>Thao Nguyen</b>, Tiara Torres-Flores, Changhyun Hwang, Carl Edwards, Ying Diao, Heng Ji. [GLaD: Synergizing Molecular Graphs and Language Descriptors for Enhanced Power Conversion Efficiency Prediction in Organic Photovoltaic Devices](https://arxiv.org/pdf/2405.14203v1). <i>The 33rd ACM International Conference on Information and Knowledge Management</i>, 2024.
 
