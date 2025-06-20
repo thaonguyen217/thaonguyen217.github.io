@@ -92,7 +92,7 @@ content:
   - title: Publications # Title for the section
     layout: text # Type of content section (list/text)
     content: |
-      [11] Ziwen Wang, Jiajun Fan, Ruihan Guo, <b>Thao Nguyen</b>, Heng Ji, Ge Liu [ProteinZero: Self-Improving Protein Generation via Online Reinforcement Learning](https://arxiv.org/pdf/2506.07459). <i>preprint arXiv:2506.07459</i>, 2025.
+      [11] Ziwen Wang, Jiajun Fan, Ruihan Guo, <b>Thao Nguyen</b>, Heng Ji, Ge Liu. [ProteinZero: Self-Improving Protein Generation via Online Reinforcement Learning](https://arxiv.org/pdf/2506.07459). <i>preprint arXiv:2506.07459</i>, 2025.
       
       [10] Carl Edwards, Chi Han, Gawon Lee, <b>Thao Nguyen</b>, Bowen Jin, Chetan Kumar Prasad, Sara Szymkuć, Bartosz A Grzybowski, Ying Diao, Jiawei Han, Ge Liu, Hao Peng, Martin D Burke, Heng Ji. [mCLM: A Function-Infused and Synthesis-Friendly Modular Chemical Language Model](https://arxiv.org/pdf/2505.12565). <i>preprint arXiv:2505.12565</i>, 2025.
       
