@@ -68,29 +68,29 @@ content:
       - Interpretable AI for high fidelity molecular property prediction
       - Autonomous molecular design and synthesis
     
-  - title: News # Title for the section
-    layout: list # Type of content section (list/text)
-    content:
-    - layout: left
-      title: Ph.D. student @ UIUC
-      caption: Aug - 2023 Present
-      description: | # this will include new lines to allow paragraphs
-          Started Ph.D in CS at UIUC, joined [BLENDER lab](https://blender.cs.illinois.edu/).
-    - layout: left
-      title: RA @ VISHC
-      caption: Jan 2022 - Jun 2023
-      description: | # this will include new lines to allow paragraphs
-          Started working at [VISHC](https://smarthealth.vinuni.edu.vn/) as a research assistant on the ECG signal analysis project.
-    - layout: left
-      title: Internship @ VinBidata
-      caption: Jan 2021 - Dec 2022
-      description: | # this will include new lines to allow paragraphs
-          Started working at Medical Image Processing Department - [VinBigdata JSC](https://vinbigdata.com/en).
-    - layout: left
-      title: Undergrad
-      caption: Sep 2016 - Dec 2020
-      description: | # this will include new lines to allow paragraphs
-          Received BSc degree in Biomedical Engineering from [HUST](https://hust.edu.vn/).
+  # - title: News # Title for the section
+  #   layout: list # Type of content section (list/text)
+  #   content:
+  #   - layout: left
+  #     title: Ph.D. student @ UIUC
+  #     caption: Aug - 2023 Present
+  #     description: | # this will include new lines to allow paragraphs
+  #         Started Ph.D in CS at UIUC, joined [BLENDER lab](https://blender.cs.illinois.edu/).
+  #   - layout: left
+  #     title: RA @ VISHC
+  #     caption: Jan 2022 - Jun 2023
+  #     description: | # this will include new lines to allow paragraphs
+  #         Started working at [VISHC](https://smarthealth.vinuni.edu.vn/) as a research assistant on the ECG signal analysis project.
+  #   - layout: left
+  #     title: Internship @ VinBidata
+  #     caption: Jan 2021 - Dec 2022
+  #     description: | # this will include new lines to allow paragraphs
+  #         Started working at Medical Image Processing Department - [VinBigdata JSC](https://vinbigdata.com/en).
+  #   - layout: left
+  #     title: Undergrad
+  #     caption: Sep 2016 - Dec 2020
+  #     description: | # this will include new lines to allow paragraphs
+  #         Received BSc degree in Biomedical Engineering from [HUST](https://hust.edu.vn/).
 
   - title: Publications # Title for the section
     layout: text # Type of content section (list/text)
