@@ -34,6 +34,10 @@ additional_links:
 - title: googlescholar
   icon: fas fa-globe
   url: https://scholar.google.com/citations?hl=en&user=pJ47-Z4AAAAJ&view_op=list_works&gmla=AILGF5X2PRDxuqeZ2YkuURDld58r86F8_goNS1rTtdYGhL6P99jCICh_-qg3asRHav-Et89pKHhbNd-11DfUmjrO
+additional_links:
+- title: CV
+  icon: fas fa-file
+  url: https://thaonguyen217.github.io/CV/CV_Thao.pdf
 
 # - title: another link
 #   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&m=free)
