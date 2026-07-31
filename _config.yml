@@ -36,7 +36,7 @@ additional_links:
   url: https://scholar.google.com/citations?hl=en&user=pJ47-Z4AAAAJ&view_op=list_works&gmla=AILGF5X2PRDxuqeZ2YkuURDld58r86F8_goNS1rTtdYGhL6P99jCICh_-qg3asRHav-Et89pKHhbNd-11DfUmjrO
 - title: CV
   icon: fas fa-file
-  url: https://thaonguyen217.github.io/CV/CV_Thao.pdf
+  url: https://thaonguyen217.github.io/files/CV_Thao.pdf
 
 # - title: another link
 #   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&m=free)
@@ -97,13 +97,13 @@ content:
     content: |
       [12] <b>Thao Nguyen</b>, Heng Ji. [MolLingo: Molecule-Native Representations for LLM-Powered Scientific Agents](https://arxiv.org/abs/2605.27853). <i>preprint arXiv:2605.27853</i>, 2026.
 
-      [11] Carl Edwards\*, Chi Han\*, Gawon Lee, <b>Thao Nguyen</b>, Bowen Jin, Chetan Kumar Prasad, Sara Szymkuć, Bartosz A Grzybowski, Ying Diao, Jiawei Han, Ge Liu, Hao Peng, Martin D Burke, Heng Ji. [mCLM: A Function-Infused and Synthesis-Friendly Modular Chemical Language Model](https://arxiv.org/pdf/2505.12565). In <i>Proceedings of the Fourteenth International Conference on Learning Representations (ICLR) (Oral Presentation)</i>, 2026.
+      [11] <b>Thao Nguyen</b>, Kuan-Hao Huang, Ge Liu, Martin D. Burke, Ying Diao, Heng Ji. [FARM: Functional Group-Aware Representations for Small Molecules](https://arxiv.org/pdf/2410.02082). <i>Transactions on Machine Learning Research</i>, 2026.
 
-      [10] Ziwen Wang, Jiajun Fan, Ruihan Guo, <b>Thao Nguyen</b>, Heng Ji, Ge Liu. [ProteinZero: Self-Improving Protein Generation via Online Reinforcement Learning](https://arxiv.org/pdf/2506.07459). <i>preprint arXiv:2506.07459</i>, 2025.
+      [10] Ziwen Wang, Jiajun Fan, Ruihan Guo, <b>Thao Nguyen</b>, Heng Ji, Ge Liu. [ProteinZero: Self-Improving Protein Generation via Online Reinforcement Learning](https://arxiv.org/pdf/2506.07459). <i>Transactions on Machine Learning Research</i>, 2026.
+
+      [9] Carl Edwards\*, Chi Han\*, Gawon Lee, <b>Thao Nguyen</b>, Bowen Jin, Chetan Kumar Prasad, Sara Szymkuć, Bartosz A Grzybowski, Ying Diao, Jiawei Han, Ge Liu, Hao Peng, Martin D Burke, Heng Ji. [mCLM: A Function-Infused and Synthesis-Friendly Modular Chemical Language Model](https://arxiv.org/pdf/2505.12565). In <i>Proceedings of the Fourteenth International Conference on Learning Representations (ICLR) (Oral Presentation)</i>, 2026.
       
-      [9] Ziwen Wang, Jiajun Fan, <b>Thao Nguyen</b>, Heng Ji, Ge Liu. [Variational Supervised Contrastive Learning](https://arxiv.org/pdf/2506.07413). In <i>Advances in Neural Information Processing Systems (NeurIPS)</i>, 2025.
-      
-      [8] <b>Thao Nguyen</b>, Kuan-Hao Huang, Ge Liu, Martin D. Burke, Ying Diao, Heng Ji. [FARM: Functional Group-Aware Representations for Small Molecules](https://arxiv.org/pdf/2410.02082). <i>preprint arXiv:2410.02082</i>, 2024.
+      [8] Ziwen Wang, Jiajun Fan, <b>Thao Nguyen</b>, Heng Ji, Ge Liu. [Variational Supervised Contrastive Learning](https://arxiv.org/pdf/2506.07413). In <i>Advances in Neural Information Processing Systems (NeurIPS)</i>, 2025.
       
       [7] <b>Thao Nguyen</b>, Tiara Torres-Flores, Changhyun Hwang, Carl Edwards, Ying Diao, Heng Ji. [GLaD: Synergizing Molecular Graphs and Language Descriptors for Enhanced Power Conversion Efficiency Prediction in Organic Photovoltaic Devices](https://arxiv.org/pdf/2405.14203v1). In <i>Proceedings of the 33rd ACM International Conference on Information and Knowledge Management (CIKM)</i>, 2024.
 
