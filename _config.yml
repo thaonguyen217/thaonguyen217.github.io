@@ -97,7 +97,7 @@ content:
     content: |
       [12] <b>Thao Nguyen</b>, Heng Ji. [MolLingo: Molecule-Native Representations for LLM-Powered Scientific Agents](https://arxiv.org/abs/2605.27853). <i>preprint arXiv:2605.27853</i>, 2026.
 
-      [11] <b>Thao Nguyen</b>, Kuan-Hao Huang, Ge Liu, Martin D. Burke, Ying Diao, Heng Ji. [FARM: Functional Group-Aware Representations for Small Molecules](https://arxiv.org/pdf/2410.02082). <i>Transactions on Machine Learning Research</i>, 2026.
+      [11] <b>Thao Nguyen</b>, Kuan-Hao Huang, Ge Liu, Martin D. Burke, Ying Diao, Heng Ji. [FARM: Enhancing Molecular Representations with Functional Group Awareness](https://arxiv.org/pdf/2410.02082). <i>Transactions on Machine Learning Research</i>, 2026.
 
       [10] Ziwen Wang, Jiajun Fan, Ruihan Guo, <b>Thao Nguyen</b>, Heng Ji, Ge Liu. [ProteinZero: Self-Improving Protein Generation via Online Reinforcement Learning](https://arxiv.org/pdf/2506.07459). <i>Transactions on Machine Learning Research</i>, 2026.
 
