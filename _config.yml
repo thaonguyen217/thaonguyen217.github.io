@@ -52,7 +52,7 @@ additional_links:
 # about_title: About Me
 about_profile_image: images/2B601DC5-FB7B-4A6A-A1B7-99776841D633.jpeg
 about_content: | # this will include new lines to allow paragraphs
-  Hello! I'm Thao, a Ph.D. candidate in the Siebel School of Computing and Data Science at the University of Illinois at Urbana-Champaign (UIUC). I am fortunate to be advised by Prof. [Heng Ji](https://blender.cs.illinois.edu/hengji.html) and am a member of the [BLENDER Lab](https://blender.cs.illinois.edu/).
+  Hello! I'm Thao, a Ph.D. candidate in the [Siebel School of Computing and Data Science](https://siebelschool.illinois.edu/) at the [University of Illinois at Urbana-Champaign](https://illinois.edu/) (UIUC). I am fortunate to be advised by Prof. [Heng Ji](https://blender.cs.illinois.edu/hengji.html) and am a member of the [BLENDER Lab](https://blender.cs.illinois.edu/).
 
   I am also currently working with the Molecule Maker Lab Institute ([MMLI](https://moleculemaker.org/)), where I build LLM-powered agents and foundation models for molecular representation, property prediction, and generation/optimization for drug design and materials science. I've interned at [Prescient Design](https://www.gene.com/scientists/our-scientists/prescient-design), Genentech / Roche (Summer 2026), and am currently interning at Apodex.
 
@@ -124,12 +124,7 @@ content:
   - title: A Little More About Me
     layout: text
     content: | # this will include new lines to allow paragraphs
-      Alongside my interests in research work some of my other interests and hobbies are:
-      - Table tennis
-      - Traveling
-      - Photography
-      - Drawing
-      - Graphic design
+      Alongside my interests in research work, some of my other interests and hobbies are table tennis, traveling, photography, drawing, and graphic design.
 
       <div style="display:flex;flex-wrap:wrap;gap:8px;width:100%;margin-top:1.5rem;">
         <img src="/images/1.jpg" alt="Photo 1" style="flex:1 1 auto;height:180px;object-fit:cover;border-radius:6px;">
