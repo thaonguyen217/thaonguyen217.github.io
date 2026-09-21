@@ -54,19 +54,15 @@ about_profile_image: images/2B601DC5-FB7B-4A6A-A1B7-99776841D633.jpeg
 about_content: | # this will include new lines to allow paragraphs
   Hello! I'm Thao, a Ph.D. candidate in the [Siebel School of Computing and Data Science](https://siebelschool.illinois.edu/) at the [University of Illinois at Urbana-Champaign](https://illinois.edu/) (UIUC). I am fortunate to be advised by Prof. [Heng Ji](https://blender.cs.illinois.edu/hengji.html) and am a member of the [BLENDER Lab](https://blender.cs.illinois.edu/).
 
-  I am also currently working with the Molecule Maker Lab Institute ([MMLI](https://moleculemaker.org/)), where I build LLM-powered agents and foundation models for molecular representation, property prediction, and generation/optimization for drug design and materials science. I've interned at [Prescient Design](https://www.gene.com/scientists/our-scientists/prescient-design), Genentech / Roche (Summer 2026), and am currently interning at Apodex.
+  I am also currently working with the Molecule Maker Lab Institute ([MMLI](https://moleculemaker.org/)), where I build LLM-powered agents and foundation models for molecular representation, property prediction, and generation/optimization for drug design and materials science.
+
+  I've interned at [Prescient Design](https://www.gene.com/scientists/our-scientists/prescient-design), Genentech / Roche (Summer 2026), and am currently interning at Apodex.
 
 content:
   - title: Research interests # Title for the section
     layout: text
     content: |
-      My research interests center on combining large language models (LLMs) with graph neural networks (GNNs) to build <mark>agentic AI systems for scientific discovery</mark>, with a focus on drug and materials design. Specifically, I am drawn to the following areas:
-      - LLM-powered agents for autonomous molecular design and optimization
-      - Molecule-native representations and modular chemical language models
-      - Synthesizable and fragment-based molecule generation
-      - Structure-guided optimization for binding specificity and protein design
-      - Foundation models for molecular and protein representation
-      - High-fidelity, interpretable molecular property prediction (e.g., solubility, functional groups)
+      My research interests center on combining large language models (LLMs) with graph neural networks (GNNs) to build <mark>agentic AI systems for scientific discovery</mark>, with a focus on drug and materials design. Specifically, I am drawn to LLM-powered agents for autonomous molecular design and optimization, molecule-native representations and modular chemical language models, synthesizable and fragment-based molecule generation, structure-guided optimization for binding specificity and protein design, foundation models for molecular and protein representation, and high-fidelity, interpretable molecular property prediction (e.g., solubility, functional groups).
 
   - title: Experience # Title for the section
     layout: list # Type of content section (list/text)
