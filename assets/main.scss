@@ -18,18 +18,18 @@ p, ul {
 
 .list-container .layout .details {
   @media (min-width: 768px) {
-    width: 41.66666667%;
+    width: 50%;
   }
   @media (min-width: 992px) {
-    width: 33.33333333%;
+    width: 41.66666667%;
   }
 }
 
 .list-container .layout .content {
   @media (min-width: 768px) {
-    width: 58.33333333%;
+    width: 50%;
   }
   @media (min-width: 992px) {
-    width: 66.66666667%;
+    width: 58.33333333%;
   }
 }
