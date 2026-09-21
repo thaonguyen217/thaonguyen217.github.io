@@ -68,33 +68,49 @@ content:
       - Interpretable AI for high fidelity molecular property prediction
       - Autonomous molecular design and synthesis
     
-  # - title: News # Title for the section
-  #   layout: list # Type of content section (list/text)
-  #   content:
-  #   - layout: left
-  #     title: Ph.D. student @ UIUC
-  #     caption: Aug - 2023 Present
-  #     description: | # this will include new lines to allow paragraphs
-  #         Started Ph.D in CS at UIUC, joined [BLENDER lab](https://blender.cs.illinois.edu/).
-  #   - layout: left
-  #     title: RA @ VISHC
-  #     caption: Jan 2022 - Jun 2023
-  #     description: | # this will include new lines to allow paragraphs
-  #         Started working at [VISHC](https://smarthealth.vinuni.edu.vn/) as a research assistant on the ECG signal analysis project.
-  #   - layout: left
-  #     title: Internship @ VinBidata
-  #     caption: Jan 2021 - Dec 2022
-  #     description: | # this will include new lines to allow paragraphs
-  #         Started working at Medical Image Processing Department - [VinBigdata JSC](https://vinbigdata.com/en).
-  #   - layout: left
-  #     title: Undergrad
-  #     caption: Sep 2016 - Dec 2020
-  #     description: | # this will include new lines to allow paragraphs
-  #         Received BSc degree in Biomedical Engineering from [HUST](https://hust.edu.vn/).
+  - title: Experience # Title for the section
+    layout: list # Type of content section (list/text)
+    content:
+    - layout: left
+      title: Intern @ Apodex
+      caption: Sep 2026 - Present
+      description: | # this will include new lines to allow paragraphs
+          Working as an intern at Apodex.
+    - layout: left
+      title: Intern @ Prescient Design, Genentech / Roche
+      caption: Summer 2026
+      description: | # this will include new lines to allow paragraphs
+          Interned at Prescient Design, Genentech / Roche.
+    - layout: left
+      title: Ph.D. student @ UIUC
+      caption: Aug - 2023 Present
+      description: | # this will include new lines to allow paragraphs
+          Started Ph.D in CS at UIUC, joined [BLENDER lab](https://blender.cs.illinois.edu/).
+    - layout: left
+      title: RA @ VISHC
+      caption: Jan 2022 - Jun 2023
+      description: | # this will include new lines to allow paragraphs
+          Started working at [VISHC](https://smarthealth.vinuni.edu.vn/) as a research assistant on the ECG signal analysis project.
+    - layout: left
+      title: Internship @ VinBidata
+      caption: Jan 2021 - Dec 2022
+      description: | # this will include new lines to allow paragraphs
+          Started working at Medical Image Processing Department - [VinBigdata JSC](https://vinbigdata.com/en).
+    - layout: left
+      title: Undergrad
+      caption: Sep 2016 - Dec 2020
+      description: | # this will include new lines to allow paragraphs
+          Received BSc degree in Biomedical Engineering from [HUST](https://hust.edu.vn/).
 
   - title: Publications # Title for the section
     layout: text # Type of content section (list/text)
     content: |
+      [15] <b>Thao Nguyen</b>, Heng Ji. [SpecOpt: Contact-Diff Reasoning for Agentic Molecule Optimization Toward Binding Specificity](https://arxiv.org/abs/2609.21165). <i>preprint arXiv:2609.21165</i>, 2026.
+
+      [14] <b>Thao Nguyen</b>, Saman Shafaei, Zhengyi Zhang, Huimin Zhao, Heng Ji. [EnSol: an environment-aware graph neural network for molecular solubility prediction](https://arxiv.org/abs/2609.21151). <i>preprint arXiv:2609.21151</i>, 2026.
+
+      [13] <b>Thao Nguyen</b>, Jeonghwan Kim, Zhenhailong Wang, Heng Ji. [Fraglingo: Molecular Design via Attachment-Aware Autoregressive Fragment Generation](https://arxiv.org/abs/2609.13519). <i>preprint arXiv:2609.13519</i>, 2026.
+
       [12] <b>Thao Nguyen</b>, Heng Ji. [MolLingo: Molecule-Native Representations for LLM-Powered Scientific Agents](https://arxiv.org/abs/2605.27853). <i>preprint arXiv:2605.27853</i>, 2026.
 
       [11] <b>Thao Nguyen</b>, Kuan-Hao Huang, Ge Liu, Martin D. Burke, Ying Diao, Heng Ji. [FARM: Enhancing Molecular Representations with Functional Group Awareness](https://arxiv.org/pdf/2410.02082). <i>Transactions on Machine Learning Research</i>, 2026.
