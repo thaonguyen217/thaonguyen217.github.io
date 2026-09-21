@@ -52,9 +52,9 @@ additional_links:
 # about_title: About Me
 about_profile_image: images/2B601DC5-FB7B-4A6A-A1B7-99776841D633.jpeg
 about_content: | # this will include new lines to allow paragraphs
-  Hello! I'm Thao, a Ph.D. candidate in the Siebel School of Computing and Data Science at the University of Illinois at Urbana-Champaign (UIUC). I am fortunate to be advised by Prof. [Heng Ji](https://blender.cs.illinois.edu/hengji.html).
+  Hello! I'm Thao, a Ph.D. candidate in the Siebel School of Computing and Data Science at the University of Illinois at Urbana-Champaign (UIUC). I am fortunate to be advised by Prof. [Heng Ji](https://blender.cs.illinois.edu/hengji.html) and am a member of the [BLENDER Lab](https://blender.cs.illinois.edu/).
 
-  I am currently working with the Molecule Maker Lab Institute ([MMLI](https://moleculemaker.org/)), where I build LLM-powered agents and foundation models for molecular representation, property prediction, and generation/optimization for drug design and materials science. I've interned at Prescient Design, Genentech / Roche (Summer 2026), and am currently interning at Apodex.
+  I am also currently working with the Molecule Maker Lab Institute ([MMLI](https://moleculemaker.org/)), where I build LLM-powered agents and foundation models for molecular representation, property prediction, and generation/optimization for drug design and materials science. I've interned at [Prescient Design](https://www.gene.com/scientists/our-scientists/prescient-design), Genentech / Roche (Summer 2026), and am currently interning at Apodex.
 
 content:
   - title: Research interests # Title for the section
@@ -131,16 +131,16 @@ content:
       - Drawing
       - Graphic design
 
-      <div style="display:flex;flex-wrap:wrap;gap:8px;max-width:520px;margin-top:1.5rem;">
-        <img src="/images/1.jpg" alt="Photo 1" style="width:90px;height:90px;object-fit:cover;border-radius:6px;">
-        <img src="/images/2.jpg" alt="Photo 2" style="width:90px;height:90px;object-fit:cover;border-radius:6px;">
-        <img src="/images/3.jpg" alt="Photo 3" style="width:90px;height:90px;object-fit:cover;border-radius:6px;">
-        <img src="/images/4.jpg" alt="Photo 4" style="width:90px;height:90px;object-fit:cover;border-radius:6px;">
-        <img src="/images/5.jpg" alt="Photo 5" style="width:90px;height:90px;object-fit:cover;border-radius:6px;">
-        <img src="/images/6.jpg" alt="Photo 6" style="width:90px;height:90px;object-fit:cover;border-radius:6px;">
-        <img src="/images/7.jpg" alt="Photo 7" style="width:90px;height:90px;object-fit:cover;border-radius:6px;">
-        <img src="/images/9.jpg" alt="Photo 8" style="width:90px;height:90px;object-fit:cover;border-radius:6px;">
-        <img src="/images/12.jpg" alt="Photo 9" style="width:90px;height:90px;object-fit:cover;border-radius:6px;">
+      <div style="display:flex;flex-wrap:wrap;gap:8px;width:100%;margin-top:1.5rem;">
+        <img src="/images/1.jpg" alt="Photo 1" style="flex:1 1 auto;height:180px;object-fit:cover;border-radius:6px;">
+        <img src="/images/2.jpg" alt="Photo 2" style="flex:1 1 auto;height:180px;object-fit:cover;border-radius:6px;">
+        <img src="/images/3.jpg" alt="Photo 3" style="flex:1 1 auto;height:180px;object-fit:cover;border-radius:6px;">
+        <img src="/images/4.jpg" alt="Photo 4" style="flex:1 1 auto;height:180px;object-fit:cover;border-radius:6px;">
+        <img src="/images/5.jpg" alt="Photo 5" style="flex:1 1 auto;height:180px;object-fit:cover;border-radius:6px;">
+        <img src="/images/6.jpg" alt="Photo 6" style="flex:1 1 auto;height:180px;object-fit:cover;border-radius:6px;">
+        <img src="/images/7.jpg" alt="Photo 7" style="flex:1 1 auto;height:180px;object-fit:cover;border-radius:6px;">
+        <img src="/images/9.jpg" alt="Photo 8" style="flex:1 1 auto;height:180px;object-fit:cover;border-radius:6px;">
+        <img src="/images/12.jpg" alt="Photo 9" style="flex:1 1 auto;height:180px;object-fit:cover;border-radius:6px;">
       </div>
 
 #       Look at this cool image  
