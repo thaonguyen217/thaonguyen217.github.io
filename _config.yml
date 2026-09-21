@@ -126,7 +126,7 @@ content:
   - title: A Little More About Me
     layout: text
     content: | # this will include new lines to allow paragraphs
-      Alongside my interests in research work, some of my other interests and hobbies are table tennis, traveling, photography, drawing, and graphic design.
+      Outside of research, I enjoy playing table tennis, traveling, photography, drawing, and graphic design.
 
       <div style="display:flex;flex-wrap:wrap;gap:8px;width:100%;margin-top:1.5rem;">
         <img src="/images/1.jpg" alt="Photo 1" style="flex:1 1 auto;height:180px;object-fit:cover;border-radius:6px;">
