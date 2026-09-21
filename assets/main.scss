@@ -15,3 +15,21 @@ p, ul {
 .list-container .layout {
   margin-top: 1.2rem;
 }
+
+.list-container .layout .details {
+  @media (min-width: 768px) {
+    width: 41.66666667%;
+  }
+  @media (min-width: 992px) {
+    width: 33.33333333%;
+  }
+}
+
+.list-container .layout .content {
+  @media (min-width: 768px) {
+    width: 58.33333333%;
+  }
+  @media (min-width: 992px) {
+    width: 66.66666667%;
+  }
+}
