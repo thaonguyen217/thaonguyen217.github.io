@@ -89,7 +89,7 @@ header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;backgrou
 .layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:64px}
 .main{min-width:0;max-width:940px}
 .toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 72px);align-self:start;padding-top:46px;max-height:calc(100vh - 96px);overflow:auto;font-size:.86rem}
-.toc .t{font-family:var(--serif);font-weight:600;font-size:1rem;color:var(--text);margin-bottom:10px}
+.toc .t{font-family:var(--body-font);font-weight:700;font-size:.95rem;color:var(--muted);margin-bottom:10px}
 .toc a{display:block;color:var(--muted);padding:6px 0 6px 14px;border-left:2px solid var(--rule);line-height:1.35;text-decoration:none}
 .toc a:hover{color:var(--text)}
 .toc a.on{color:var(--text);border-left-color:var(--c1);font-weight:600}
@@ -126,7 +126,7 @@ strong{font-weight:700}
 blockquote.pull{margin:32px 0;padding:0 0 0 22px;border-left:3px solid var(--c1);font-family:var(--title-font);font-weight:600;font-size:clamp(1.15rem,2.6vw,1.32rem);line-height:1.45;color:var(--text)}
 
 .callout{background:var(--glass-inner);border:1px solid var(--glass-inner-border);border-left:3px solid var(--c1);border-radius:12px;padding:12px 20px;margin:24px 0;box-shadow:inset 0 1px 0 var(--glass-hi)}
-.callout .label,.box .label{font-family:var(--serif);font-weight:600;font-size:1.1rem;color:var(--text);margin:2px 0 6px}
+.callout .label,.box .label{font-family:var(--body-font);font-weight:700;font-size:1.02rem;color:var(--c1-deep);margin:2px 0 6px}
 .callout p{margin:4px 0}
 
 /* glass cards: one per section, lighter inner cards for each reviewer group and strategy */
@@ -142,7 +142,8 @@ blockquote.pull{margin:32px 0;padding:0 0 0 22px;border-left:3px solid var(--c1)
 .g1{--c:var(--c1);--c-soft:var(--c1-soft)} .g2{--c:var(--c2);--c-soft:var(--c2-soft)}
 .g3{--c:var(--c4);--c-soft:var(--c4-soft)} .g4{--c:var(--c3-deep);--c-soft:var(--c3-soft)}
 .g5{--c:var(--c1-deep);--c-soft:var(--c1-soft)}
-.tag{display:block;white-space:nowrap;font-family:var(--serif);font-size:1rem;font-weight:600;font-style:italic;color:var(--c1-deep);margin-bottom:2px}
+.tag{white-space:nowrap;color:var(--c1-deep)}
+.tag::after{content:"·";color:var(--muted);margin:0 .45em}
 
 .box{background:var(--glass-inner);border:1px solid var(--glass-inner-border);border-radius:14px;padding:14px 24px;margin:24px 0;box-shadow:inset 0 1px 0 var(--glass-hi)}
 .box .label{color:var(--c1-deep)}
