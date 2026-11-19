@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Lessons on writing rebuttals when reviewers and ACs increasingly rely on LLMs.">
+<meta property="og:title" content="Some Rebuttal Lessons in the Age of LLM-Assisted Peer Review">
+<meta property="og:description" content="Lessons on writing rebuttals when reviewers and ACs increasingly rely on LLMs.">
+<meta property="og:type" content="article">
+<link rel="icon" href="/favicon.png">
+<title>Rebuttal Lessons</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Nunito+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap">
+<style>
+/* Layout: one centred reading column (cover, title, article) under a slim sticky bar with language + theme switches */
+:root{
+  --bg:#F0F4F8; --surface:#FFFFFF; --text:#2E3338; --muted:#5E6A75; --rule:#D5DEE7;
+  /* glacier palette: steel blue, sky, ice, coral */
+  --c1:#2D6A9F; --c1-soft:#E2EAF2; --c1-deep:#225077;
+  --c2:#6FB1C8; --c2-soft:#E5F1F5; --c2-deep:#456E7C;
+  --c3:#B9DCDD; --c3-soft:#EAF4F5; --c3-deep:#596A6A;
+  --c4:#E8836B; --c4-soft:#FBE9E4; --c4-deep:#995647;
+  --mark:#CFE6EC; --link:var(--c1-deep); --on-accent:#FFFFFF;
+  --cover-bg:#E2EAF2; --cover-card:#FFFFFF; --cover-line:#D3DEE8;
+  --glow:#D3E4F1; --glow2:#E3F0F2; --dot:#CBD6E1; --orb-op:.28;
+  --glass:rgba(255,255,255,.55); --glass-border:rgba(255,255,255,.75); --glass-inner:rgba(255,255,255,.55); --glass-inner-border:rgba(45,106,159,.14);
+  --glass-shadow:rgba(30,60,95,.16); --glass-hi:rgba(255,255,255,.9);
+  --body-font:Lato,"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,system-ui,sans-serif;
+  --title-font:"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,system-ui,sans-serif;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --radius:8px; --col:1280px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --glow:#1A2C40; --glow2:#15262C; --dot:#212C38; --orb-op:.22;
+  --glass:rgba(28,37,47,.55); --glass-border:rgba(255,255,255,.09); --glass-inner:rgba(255,255,255,.04); --glass-inner-border:rgba(255,255,255,.08);
+  --glass-shadow:rgba(0,0,0,.45); --glass-hi:rgba(255,255,255,.07);
+  --bg:#12181F; --surface:#19212A; --text:#E6EDF3; --muted:#94A3B1; --rule:#283440;
+  --c1:#7FB0DB; --c1-soft:#1C2C3D; --c1-deep:#A9CBEA;
+  --c2:#7FC0D6; --c2-soft:#1B2E36; --c2-deep:#A6D6E6;
+  --c3:#B9DCDD; --c3-soft:#1E2D30; --c3-deep:#B9DCDD;
+  --c4:#E8836B; --c4-soft:#3A2420; --c4-deep:#F0A592;
+  --mark:#22414C; --link:#A9CBEA; --on-accent:#12181F;
+  --cover-bg:#1A2531; --cover-card:#212D3A; --cover-line:#34475A;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --glow:#1A2C40; --glow2:#15262C; --dot:#212C38; --orb-op:.22;
+  --glass:rgba(28,37,47,.55); --glass-border:rgba(255,255,255,.09); --glass-inner:rgba(255,255,255,.04); --glass-inner-border:rgba(255,255,255,.08);
+  --glass-shadow:rgba(0,0,0,.45); --glass-hi:rgba(255,255,255,.07);
+  --bg:#12181F; --surface:#19212A; --text:#E6EDF3; --muted:#94A3B1; --rule:#283440;
+  --c1:#7FB0DB; --c1-soft:#1C2C3D; --c1-deep:#A9CBEA;
+  --c2:#7FC0D6; --c2-soft:#1B2E36; --c2-deep:#A6D6E6;
+  --c3:#B9DCDD; --c3-soft:#1E2D30; --c3-deep:#B9DCDD;
+  --c4:#E8836B; --c4-soft:#3A2420; --c4-deep:#F0A592;
+  --mark:#22414C; --link:#A9CBEA; --on-accent:#12181F;
+  --cover-bg:#1A2531; --cover-card:#212D3A; --cover-line:#34475A;
+  color-scheme:dark}
+
+*{box-sizing:border-box}
+button,input,select,textarea,svg text{font-family:var(--title-font)}
+html{scroll-behavior:smooth}
+body{margin:0;background-color:var(--bg);color:var(--text);font-family:var(--body-font);font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased}
+/* living aurora: blurred cold-colour orbs drifting slowly behind the page, kept faint so text stays crisp */
+.aurora{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.aurora span{position:absolute;border-radius:50%;filter:blur(80px);opacity:var(--orb-op);will-change:transform}
+.aurora .o1{width:max(46vw,320px);height:max(46vw,320px);left:-12vw;top:-18vw;background:var(--c1);animation:drift1 24s ease-in-out infinite alternate}
+.aurora .o2{width:max(38vw,280px);height:max(38vw,280px);right:-10vw;top:12vh;background:var(--c2);animation:drift2 30s ease-in-out infinite alternate}
+.aurora .o3{width:max(42vw,300px);height:max(42vw,300px);left:18vw;bottom:-22vw;background:var(--c3);animation:drift3 27s ease-in-out infinite alternate}
+.aurora .o4{width:max(28vw,220px);height:max(28vw,220px);right:8vw;bottom:-6vw;background:var(--c1);animation:drift4 34s ease-in-out infinite alternate}
+@keyframes drift1{0%{transform:translate(0,0) scale(1)}50%{transform:translate(22vw,14vh) scale(1.15)}100%{transform:translate(8vw,30vh) scale(.92)}}
+@keyframes drift2{0%{transform:translate(0,0) scale(1)}50%{transform:translate(-20vw,22vh) scale(.88)}100%{transform:translate(-8vw,-6vh) scale(1.12)}}
+@keyframes drift3{0%{transform:translate(0,0) scale(1)}50%{transform:translate(24vw,-18vh) scale(1.1)}100%{transform:translate(-10vw,-8vh) scale(.95)}}
+@keyframes drift4{0%{transform:translate(0,0) scale(1)}50%{transform:translate(-26vw,-20vh) scale(1.2)}100%{transform:translate(-6vw,-34vh) scale(.9)}}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+.wrap{max-width:calc(var(--col) + 48px);margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+
+/* bar */
+header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px}
+.brand{font-family:var(--title-font);font-weight:700;font-size:.95rem;letter-spacing:.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.controls{display:flex;gap:8px;flex-shrink:0}
+.seg{display:inline-flex;border:1px solid var(--glass-border);border-radius:999px;background:var(--glass);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);padding:2px}
+.seg button{font-family:var(--title-font);font-weight:600;font-size:.78rem;letter-spacing:.04em;color:var(--muted);background:none;border:0;border-radius:999px;padding:.3rem .75rem;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--c1);color:var(--on-accent)}
+.seg button:focus-visible{outline:2px solid var(--c1);outline-offset:2px}
+#progress{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:var(--c1)}
+
+/* two-column reading layout: sticky contents on the left, text on the right */
+.layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:64px}
+.main{min-width:0;max-width:940px}
+.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 72px);align-self:start;padding-top:46px;max-height:calc(100vh - 96px);overflow:auto;font-size:.86rem}
+.toc .t{font-family:var(--title-font);font-weight:700;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.toc a{display:block;color:var(--muted);padding:6px 0 6px 14px;border-left:2px solid var(--rule);line-height:1.35;text-decoration:none}
+.toc a:hover{color:var(--text)}
+.toc a.on{color:var(--text);border-left-color:var(--c1);font-weight:600}
+h2{scroll-margin-top:80px}
+@media (max-width:980px){.layout{display:block}.toc{display:none}}
+
+/* cover */
+.cover{margin:28px 0 0;border-radius:12px;overflow:hidden;line-height:0}
+.cover svg{width:100%;height:clamp(150px,20vw,260px);display:block}
+.cv-bg{fill:var(--cover-bg)} .cv-card{fill:var(--cover-card);stroke:var(--cover-line);stroke-width:1.5}
+.cv-line{fill:var(--cover-line)} .cv-mark{fill:var(--c4);opacity:.4}
+.cv-b1{fill:var(--c1)} .cv-b2{fill:var(--c1-deep)} .cv-b3{fill:var(--c2-deep)}
+.cv-num{fill:var(--on-accent);font-family:var(--title-font);font-weight:700;font-size:26px}
+.cv-ticket{fill:var(--cover-card);stroke:var(--c1);stroke-width:2} .cv-tt{fill:var(--c1-deep);font-family:var(--title-font);font-weight:700}
+.cv-perf{fill:var(--cover-bg)} .cv-dash{stroke:var(--c1);stroke-opacity:.5;stroke-width:2;stroke-dasharray:6 6}
+.cv-blob1{fill:var(--c2);opacity:.08} .cv-blob2{fill:var(--c1);opacity:.07}
+.cv-chip{fill:var(--cover-card);stroke:var(--cover-line);stroke-width:1.5} .cv-chipt{fill:var(--muted);font-family:var(--title-font);font-weight:700;font-size:15px;letter-spacing:.08em}
+
+/* article */
+article{padding-block:8px 48px}
+.eyebrow{font-family:var(--title-font);font-weight:600;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:40px 0 10px}
+h1,h2,h3{font-family:var(--title-font);font-weight:700;line-height:1.25;color:var(--text);text-wrap:balance}
+h1{font-family:var(--serif);font-weight:700;font-size:clamp(2.1rem,4.8vw,3rem);line-height:1.15;margin:44px 0 20px;letter-spacing:-.01em}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.45rem,3.2vw,1.8rem);margin:60px 0 12px}
+.brand{font-family:var(--serif)!important;font-size:1.05rem!important}
+h2 .n{color:var(--muted);font-weight:600;margin-right:.4em}
+h3{font-size:1.12rem;margin:30px 0 8px}
+p{margin:14px 0}
+.lede{font-size:1.16rem;font-style:italic;color:var(--text)}
+.lede + p{margin-top:18px}
+mark{background:none;color:inherit;font-weight:600;box-shadow:inset 0 -.38em 0 var(--mark);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+strong{font-weight:700}
+
+blockquote.pull{margin:32px 0;padding:0 0 0 22px;border-left:3px solid var(--c1);font-family:var(--title-font);font-weight:600;font-size:clamp(1.15rem,2.6vw,1.32rem);line-height:1.45;color:var(--text)}
+
+.callout{background:var(--glass-inner);border:1px solid var(--glass-inner-border);border-left:3px solid var(--c1);border-radius:12px;padding:12px 20px;margin:24px 0;box-shadow:inset 0 1px 0 var(--glass-hi)}
+.callout .label,.box .label{font-family:var(--title-font);font-weight:700;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--c4-deep);margin-bottom:4px}
+.callout p{margin:4px 0}
+
+/* glass cards: one per section, lighter inner cards for each reviewer group and strategy */
+.glass{background:var(--glass);border:1px solid var(--glass-border);border-radius:18px;padding:6px 36px 22px;margin:28px 0;
+  -webkit-backdrop-filter:blur(18px) saturate(150%);backdrop-filter:blur(18px) saturate(150%);
+  box-shadow:0 14px 34px -16px var(--glass-shadow),inset 0 1px 0 var(--glass-hi)}
+.glass > h2:first-child{margin-top:26px}
+.glass.inner{background:var(--glass-inner);border:1px solid var(--glass-inner-border);border-radius:14px;padding:4px 24px 12px;margin:18px 0;
+  -webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:inset 0 1px 0 var(--glass-hi)}
+.glass.inner > h3:first-child{margin-top:18px}
+.group-box{margin:18px 0}
+.group-box h3{margin:18px 0 4px}
+.g1{--c:var(--c1);--c-soft:var(--c1-soft)} .g2{--c:var(--c2);--c-soft:var(--c2-soft)}
+.g3{--c:var(--c4);--c-soft:var(--c4-soft)} .g4{--c:var(--c3-deep);--c-soft:var(--c3-soft)}
+.g5{--c:var(--c1-deep);--c-soft:var(--c1-soft)}
+.tag{display:block;white-space:nowrap;font-family:var(--title-font);font-size:.92rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--c1-deep);margin-bottom:4px}
+
+.box{background:var(--glass-inner);border:1px solid var(--glass-inner-border);border-radius:14px;padding:14px 24px;margin:24px 0;box-shadow:inset 0 1px 0 var(--glass-hi)}
+.box .label{color:var(--c1-deep)}
+.box ul{margin:6px 0;padding-left:1.1rem}
+.box li{margin:6px 0}
+.box li::marker{color:var(--c2)}
+
+ul.lessons{list-style:none;padding:0;margin:10px 0}
+ul.lessons li{padding:14px 0;border-bottom:1px solid var(--rule)}
+ul.lessons li:last-child{border-bottom:0}
+ul.lessons strong{font-family:var(--title-font);display:block;margin-bottom:2px}
+
+footer{border-top:1px solid var(--rule);color:var(--muted);font-size:.85rem;padding-block:20px 40px}
+
+@media (max-width:640px){
+  body{font-size:17px}
+  .wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+  .cover{margin-top:16px;border-radius:10px}
+  .seg button{padding:.3rem .6rem}
+  blockquote.pull{padding-left:16px}
+  .glass{padding:2px 14px 14px;border-radius:14px}
+  .glass.inner{padding:2px 12px 8px}
+  .callout,.box{padding-left:14px;padding-right:14px}
+}
+/* Lato has no Vietnamese accents on Google Fonts, so the Vietnamese text uses Nunito Sans, the closest match that has them */
+article:lang(vi){--body-font:"Nunito Sans","Segoe UI",-apple-system,BlinkMacSystemFont,Arial,system-ui,sans-serif;font-family:var(--body-font)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.aurora span{animation:none}}
+</style>
+</head>
+<body>
+
+<div class="aurora" aria-hidden="true"><span class="o1"></span><span class="o2"></span><span class="o3"></span><span class="o4"></span></div>
+
+<header class="site">
+  <div class="wrap bar">
+    <div class="brand" id="brand">Rebuttal Lessons</div>
+    <div class="controls">
+      <div class="seg" role="group" aria-label="Language">
+        <button type="button" id="lang-en" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" id="lang-vi" data-lang="vi" aria-pressed="false">VI</button>
+      </div>
+      <div class="seg" role="group" aria-label="Theme">
+        <button type="button" id="theme-light" data-theme-btn="light" aria-pressed="true">Light</button>
+        <button type="button" id="theme-dark" data-theme-btn="dark" aria-pressed="false">Dark</button>
+      </div>
+    </div>
+  </div>
+  <div id="progress"></div>
+</header>
+
+<div class="wrap">
+  <figure class="cover" aria-hidden="true">
+    <svg viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid slice">
+      <rect class="cv-bg" width="1200" height="480"/>
+      <circle class="cv-blob1" cx="1040" cy="70" r="190"/>
+      <circle class="cv-blob2" cx="140" cy="440" r="210"/>
+      <g transform="translate(0,-30)">
+      <!-- review card A -->
+      <g transform="rotate(-9 290 250)">
+        <rect class="cv-card" x="170" y="100" width="250" height="300" rx="14"/>
+        <rect class="cv-line" x="200" y="140" width="130" height="12" rx="6"/>
+        <rect class="cv-line" x="200" y="180" width="190" height="9" rx="4.5"/>
+        <rect class="cv-line" x="200" y="202" width="170" height="9" rx="4.5"/>
+        <rect class="cv-line" x="200" y="224" width="185" height="9" rx="4.5"/>
+        <rect class="cv-line" x="200" y="260" width="150" height="9" rx="4.5"/>
+        <rect class="cv-line" x="200" y="282" width="180" height="9" rx="4.5"/>
+        <rect class="cv-line" x="200" y="304" width="120" height="9" rx="4.5"/>
+        <circle class="cv-b3" cx="380" cy="356" r="26"/>
+        <text class="cv-num" x="380" y="365" text-anchor="middle">3</text>
+      </g>
+      <!-- review card B -->
+      <g transform="rotate(3 560 230)">
+        <rect class="cv-card" x="430" y="60" width="270" height="330" rx="14"/>
+        <rect class="cv-line" x="462" y="100" width="150" height="12" rx="6"/>
+        <rect class="cv-line" x="462" y="142" width="205" height="9" rx="4.5"/>
+        <rect class="cv-line" x="462" y="164" width="180" height="9" rx="4.5"/>
+        <rect class="cv-mark" x="456" y="181" width="200" height="21" rx="5"/>
+        <rect class="cv-line" x="462" y="187" width="190" height="9" rx="4.5"/>
+        <rect class="cv-line" x="462" y="224" width="160" height="9" rx="4.5"/>
+        <rect class="cv-line" x="462" y="246" width="200" height="9" rx="4.5"/>
+        <rect class="cv-line" x="462" y="268" width="140" height="9" rx="4.5"/>
+        <rect class="cv-chip" x="462" y="318" width="64" height="30" rx="15"/>
+        <text class="cv-chipt" x="494" y="338" text-anchor="middle">LLM</text>
+        <circle class="cv-b1" cx="660" cy="340" r="26"/>
+        <text class="cv-num" x="660" y="349" text-anchor="middle">6</text>
+      </g>
+      <!-- review card C -->
+      <g transform="rotate(10 850 240)">
+        <rect class="cv-card" x="730" y="100" width="250" height="300" rx="14"/>
+        <rect class="cv-line" x="760" y="140" width="120" height="12" rx="6"/>
+        <rect class="cv-line" x="760" y="180" width="185" height="9" rx="4.5"/>
+        <rect class="cv-line" x="760" y="202" width="160" height="9" rx="4.5"/>
+        <rect class="cv-line" x="760" y="224" width="175" height="9" rx="4.5"/>
+        <rect class="cv-line" x="760" y="260" width="140" height="9" rx="4.5"/>
+        <rect class="cv-line" x="760" y="282" width="170" height="9" rx="4.5"/>
+        <circle class="cv-b2" cx="940" cy="356" r="26"/>
+        <text class="cv-num" x="940" y="365" text-anchor="middle">5</text>
+      </g>
+      <!-- lottery ticket -->
+      <g transform="translate(0,-90) rotate(-7 990 380)">
+        <rect class="cv-ticket" x="850" y="330" width="290" height="110" rx="10"/>
+        <circle class="cv-perf" cx="850" cy="385" r="14"/>
+        <circle class="cv-perf" cx="1140" cy="385" r="14"/>
+        <line class="cv-dash" x1="1060" y1="342" x2="1060" y2="428"/>
+        <text class="cv-tt" x="880" y="372" font-size="13" letter-spacing="2" opacity=".7">TICKET</text>
+        <text class="cv-tt" x="880" y="418" font-size="38">No. 05</text>
+        <text class="cv-tt" x="1100" y="397" font-size="26" text-anchor="middle">×5</text>
+      </g>
+      </g>
+    </svg>
+  </figure>
+
+  <div class="layout">
+  <aside class="toc" id="toc" aria-label="Contents"></aside>
+  <div class="main">
+  <!-- ===================== ENGLISH ===================== -->
+  <article id="en" lang="en">
+    <h1>Some Rebuttal Lessons in the Age of LLM-Assisted Peer Review</h1>
+    <p class="lede">Peer review has started to feel like a lottery. Writing papers has become so much easier, the number of submissions has exploded, and the number of quality reviewers has not grown at the same pace. But with more and more reviewers using LLMs to help with reviews, the rebuttal process can become even more "interesting" @@.</p>
+    <p>I have been rejected many times, and it is from those failed rebuttals that I learned the lessons below. Right now, I am in the rebuttal phase for five papers submitted to ICLR '27. From my recent experience, it feels like reviewer behavior can change very quickly, within just three to four months: compared with the most recent NeurIPS, reviewer behavior at this ICLR has shifted noticeably.</p>
+    <p>I have realized that rebuttal is not simply about answering reviewers' concerns. You also need to understand who your reviewers are, what they actually care about, whether they read and understood your response, and most importantly, <mark>how to make the AC see the overall picture.</mark></p>
+    <p>Below are some personal observations that I think are quite useful.</p>
+
+    <h2><span class="n">1.</span>Do not rush to answer each reviewer individually. Look at the big picture first.</h2>
+    <p>When I receive reviews, the first thing I do is read all of the comments once without immediately writing a response to any reviewer. I usually take short notes on every strength and weakness mentioned by each reviewer. The goal is to understand the paper from all of the reviewers' perspectives and remember who likes what and who has concerns about what.</p>
+    <p>One thing I pay special attention to is <strong>disagreement between reviewers.</strong></p>
+    <p>For example, two reviewers appreciate the novelty of the method, while reviewer #2 thinks it has no novelty. In that case, I note it immediately. When responding to reviewer #2's concern about novelty, instead of explaining and defending the method only by myself, <mark>I can quote the positive comments from the other two reviewers.</mark></p>
+    <p>This can be much more effective than defending it on your own. The reason is simple: I am not only saying that the method has novelty; I am pointing out that other reviewers independently recognized it. This may make reviewer #2 reconsider whether they missed something. It also helps the AC see that there is disagreement among the reviewers rather than assuming the weakness is established. In other words, you are using the reviewers' independent assessments to support your argument. More importantly, it makes it easier for the AC to understand the overall picture and compare viewpoints.</p>
+    <div class="callout"><p>Do not forget that ACs handle many papers, and a good rebuttal should make their job easier too.</p></div>
+
+    <h2><span class="n">2.</span>Try to classify your reviewers</h2>
+    <p>I think this is becoming increasingly important in the age of LLM-assisted peer review. Not every reviewer reads a paper in the same way, and not everyone participates in the rebuttal phase with the same level of effort.</p>
+    <p>I usually divide reviewers into several groups based on how they write their reviews, the questions they ask, and how they interact during the discussion phase.</p>
+
+    <div class="group-box g1">
+      <h3><span class="tag">Group 1</span>Reviewers who truly read and understand the paper</h3>
+      <p>This is my favorite group of reviewers. They really spend time reading the paper, trying to understand the contribution, thinking about the limitations, and writing substantive comments.</p>
+      <p>A recognizable characteristic is that they often ask sharp, relevant questions that are exactly the kinds of points that deserve clarification. Sometimes they also ask seemingly basic but very specific questions. I mean questions that naturally arise while a person is reading the paper and trying to make sense of it. They do not feel like questions automatically generated by GPT or Claude after a generic prompt.</p>
+      <p>These reviewers are also more likely to continue participating in the discussion phase, both with the authors and the AC. They have already invested effort in understanding the paper, so they are more likely to read the rebuttal and seriously consider new arguments.</p>
+    </div>
+
+    <div class="group-box g2">
+      <h3><span class="tag">Group 2</span>Reviewers who use an LLM to review the paper</h3>
+      <p>This may be the largest group. They give the paper to an LLM, ask it to review the paper, and use most of the generated text as their own review. This behavior may very well continue during the rebuttal phase.</p>
+      <p>Imagine this: you write a detailed response explaining each concern. The reviewer may paste the entire response into an LLM and ask it whether the authors addressed the concerns. They then copy the LLM's answer into the discussion.</p>
+      <p>They do this because, instead of reading and understanding the paper themselves from the beginning, they delegated the work to AI. During the rebuttal phase, it's likely that they do not understand your response clearly, and the fastest option is to continue letting AI do the work for them.</p>
+      <p>A recognizable sign is a review that is extremely polite and pleasant, because that is often how an LLM tends to write. You may sometimes notice that two reviewers leave very similar comments, which could mean that they are using an LLM and receiving similar feedback.</p>
+      <p>Using an LLM does not mean that a reviewer lacks competence or does not care about the paper. Some people use AI as a very effective support tool. What I mean here is reviewers who essentially outsource the entire review process to an LLM.</p>
+    </div>
+
+    <div class="group-box g3">
+      <h3><span class="tag">Group 3</span>Reviewers who use an LLM but want to reject the paper from the start</h3>
+      <p>This is a fairly unpleasant group.</p>
+      <p>A reviewer may have already formed an initial bias and then use an LLM to find evidence supporting the rejection decision. In that situation, AI becomes a tool for digging out flaws and reinforcing bias, rather than a tool for neutral evaluation. They may keep prompting the LLM in increasingly negative directions until it finds something that appears to be wrong in the paper.</p>
+      <p>A recognizable characteristic is that the comments may be toxic and unfocused. For example, the reviewer might ignore important details in the introduction and main tables, then jump to a comment about Table 16 on page 30. :)</p>
+      <p>It feels like they are trying to excavate one issue rather than genuinely evaluating the contribution of the paper.</p>
+    </div>
+
+    <div class="group-box g4">
+      <h3><span class="tag">Group 4</span>Reviewers who do not use an LLM but do not really put effort into reading the paper</h3>
+      <p>I encounter this group fairly often in AI for Science. I see a reviewer like this almost every time I submit a paper.</p>
+      <p>They may give your paper a 1 and be extremely confident in their judgment, while their comments are pretty shallow. Their criticisms often concern fundamental limitations of an entire research field and are then applied to evaluate your paper.</p>
+      <p>For example, they criticize a paper for lacking wet-lab evaluation, even though 99% of the papers submitted to the same venue do not have wet-lab evaluation.</p>
+      <p>It feels like they did not put much effort into reading and understanding the paper, yet remain very confident in their assessment.</p>
+      <p>I suspect these reviewers are sometimes researchers from a different field, are listed on many paper author lists, and are therefore assigned reviews, or are professors/people from industry who are extremely busy and do not have time to read your paper.</p>
+      <p>They may not use an LLM to read the paper and may write their comments themselves, but that does not mean their review is of high quality.</p>
+    </div>
+
+    <div class="group-box g5">
+      <h3><span class="tag">Group 5</span>Reviewers who want to earn the Best Reviewer Award</h3>
+      <p>This group is quite rare, but I think they are among the most valuable reviewers. They truly want to be good reviewers. They may read the paper very carefully, go through the appendix, inspect the code, reproduce experiments, and verify whether everything is actually as transparent as the authors claim.</p>
+      <p>With AI agents, reproducing experiments is no longer as difficult as before. I have been seeing more reviewers like this. Their opinions carry significant weight because they do not merely offer comments; they actively verify many of the claims in the paper. They may discuss with the authors, participate in the reviewer discussion, and continue the conversation with the AC.</p>
+      <p>Meeting a reviewer like this can make rebuttal exhausting, especially if you were not well prepared from the beginning. But I think these are golden reviewers. They genuinely care about evaluating the paper objectively, and being a good reviewer means something to them.</p>
+    </div>
+
+    <h2><span class="n">3.</span>Determine the reviewer group to choose the right rebuttal strategy</h2>
+    <p>After building a reasonable picture of each reviewer, I think your rebuttal should be adjusted accordingly.</p>
+
+    <h3><span class="tag g1">Group 1</span>Rebut the paper properly</h3>
+    <p>For reviewers who truly read and understand the paper, focus on addressing their concerns with arguments, explanations, or additional experiments when necessary.</p>
+    <p>Use a respectful tone and go straight to the point. Do not write long responses just to sound convincing. These reviewers understand your paper, so they will immediately notice if you are being evasive or do not actually answer the question.</p>
+    <p>I want to emphasize that many authors now use LLMs to write rebuttals. That is not inherently wrong, but sometimes an LLM generates polished answers that do not actually address the reviewer's specific concern. <mark>Do not leave the reviewer with the impression that you do not know what you are talking about.</mark></p>
+    <p>The chance of real engagement from this group during the rebuttal phase is relatively high. If the paper is strong enough and their concerns can be resolved, you have a real opportunity to change their minds.</p>
+
+    <h3><span class="tag g2">Group 2</span>Prepare a response for both the reviewer and the LLM</h3>
+    <p>For reviewers who essentially outsource review to an LLM, you still need to write a clear and careful response.</p>
+    <p>There is one thing I would do: <mark>run your response through an LLM first.</mark> Mimic exactly what the reviewer may do. Feed the original review and your response into an LLM, ask it whether the concerns are addressed, and see whether it raises new criticisms.</p>
+    <p>I know it is stupid. It feels like you are rebutting an LLM rather than a human. But it is what it is. If the reviewer uses an LLM to evaluate your response, preparing a response that the LLM can understand and judge positively is a reasonable strategy.</p>
+
+    <h3><span class="tag g3">Group 3</span>Soft on tone, strong on substance</h3>
+    <p>When a reviewer seems to have been set on rejection from the start, tread carefully.</p>
+    <p>Thank them politely and show that you seriously considered their concerns. But for criticisms that are unsupported or unreasonable, you should firmly defend your position.</p>
+    <p>In particular, if positive comments from other reviewers support your argument, use them.</p>
+    <p>The reason is that this group may have no real intention of changing their mind, regardless of how convincing your explanation is. If you are too soft and keep trying to satisfy them, they may continue digging up additional problems whenever they can find one. At the same time, you do not want to make them feel attacked and encourage them to become more aggressive in the discussion with the AC.</p>
+    <blockquote class="pull">So my strategy is: soft in tone, firm in reasoning.</blockquote>
+    <p>Remember that a rebuttal is not written only for this reviewer. The AC will read it too. The goal is to show the AC that you addressed the concerns seriously and allow them to decide whether the remaining criticisms are actually reasonable.</p>
+
+    <h3><span class="tag g4">Group 4</span>Write for the AC more than for the reviewer</h3>
+    <p>For reviewers who do not really put effort into reading and understanding the paper, I do not expect them to spend much time reading my rebuttal. And yeah, you may receive silent treatment.</p>
+    <p>My strategy remains polite, but I defend important points firmly, especially the points they used to justify an extremely low rating.</p>
+    <p>Again, use positive comments from other reviewers whenever possible.</p>
+    <p>One useful tip is that during the author-reviewer discussion phase, if another reviewer makes a positive comment that helps address this reviewer's concern, <mark>write a new response pointing that out.</mark> Even if the original reviewer remains silent.</p>
+    <p>You do not necessarily need to write the response to convince that reviewer. Sometimes the more important goal is to help the AC understand the full situation and avoid overlooking information that favors the paper.</p>
+
+    <h3><span class="tag g5">Group 5</span>Prepare well before submitting the paper</h3>
+    <p>For reviewers who are truly dedicated and capable of reproducing experiments, the best response is not a special rebuttal trick. It is to prepare carefully before submission.</p>
+    <p><mark>Everything has to be consistent, from the paper to the code.</mark> Log all experiments, at least those used in the main tables. Make sure the code actually implements what the method describes and runs to produce results similar to those reported in the paper. Do not let a reviewer run the code and discover that the implementation differs from the method or that reproduced results are far from the main tables and cannot be explained.</p>
+    <p>Rebuttal with this group can still be exhausting, but I think these are the reviewers you should value most.</p>
+
+    <h2><span class="n">4.</span>Saying "satisfied" does not mean the reviewer will raise the score</h2>
+    <p>This is a rather sad point T_T.</p>
+    <p>Even if you addressed every comment satisfactorily, whether a reviewer is willing to raise their score depends heavily on their initial view and intention. They may feel that the paper is not good enough at a fundamental level, even though the specific concerns have been resolved. Or they simply do not want to change their rating. Or, for a completely absurd reason like in my case:</p>
+    <p>All four reviewers gave weak reject ratings. I tried to address all of their comments in the rebuttal. Afterwards, all four said that they were satisfied with my responses. <strong>But no one raised their score.</strong> I thought everything looked pretty good. The AC would read the discussion, see that all reviewers had acknowledged that their concerns were resolved, and maybe accept the paper. Instead, the paper was rejected.</p>
+    <p>I do not know exactly what happened, but I suspected that the AC may not have read the rebuttal and discussion carefully. In this case, it was NeurIPS '26. A special feature of that venue was that the AC wrote the meta-review before the rebuttal phase and clearly stated what I needed to do for the paper to be accepted. As a result, the reviewers felt that the AC had already made up their mind and did not bother raising their ratings. But the AC looked at the final ratings, saw that no reviewer had raised their score, and concluded that the rebuttal was not convincing. The sad part is that the reasons used to reject the paper were the same concerns I had addressed in the rebuttal. Perhaps the AC had used an LLM to write the meta-review and then made the final decision mainly based on ratings.</p>
+    <p>This is also why I think nudging reviewers to raise their scores is extremely important. It is not enough for them to say they understood or were satisfied with the response. Ideally, they should demonstrate that change through their rating. Because you do not know how carefully the AC will read the rebuttal.</p>
+    <div class="callout"><p>Do not assume that a reviewer saying "Thank you, this addresses my concerns" means they will increase the score. <strong>Nudge them if they say that but leave the score unchanged.</strong></p></div>
+
+    <h2><span class="n">5.</span>AC: the most important and most mysterious factor</h2>
+    <p>Finally, we have to talk about the AC. The AC is the hardest factor to predict in the entire peer review process.</p>
+    <p>Many ACs work with extraordinary responsibility. They read the reviews, rebuttal, and discussion, then make their own judgment based on all available information.</p>
+    <p>But some ACs overuse LLMs and delegate a large part of the evaluation to AI because the number of papers they have to handle is simply too large.</p>
+    <p>If you are lucky enough to encounter an AC who actually reads and understands the rebuttal, the process can be relatively fair. They will recognize which concerns were resolved and what disagreements remain between reviewers, and then evaluate the paper based on the full picture.</p>
+    <p>If not, the AC may simply look at the final ratings, select a few weaknesses mentioned by the reviewers to justify a rejection, regardless of whether those weaknesses were addressed in the rebuttal.</p>
+    <p>This is why I keep coming back to a point mentioned earlier: <mark>rebuttal is not only for reviewers.</mark> You need to write it in a way that helps the AC understand the situation even if they do not read every line of your response.</p>
+    <p>Most importantly, try to get reviewers to raise their scores whenever possible.</p>
+    <p>You cannot control how carefully an AC will read the rebuttal. But at least, if reviewers have changed their ratings, you gain an advantage in a case where the AC only looks at the scores.</p>
+    <p>A small but useful tip is to <strong>write a separate message summarizing the situation for the AC</strong> before the author-reviewer discussion phase ends. By that point, the AC may have reviewed many papers, or may have to synthesize a long discussion. A short, structured message helps them see the work that has already been done instead of forcing them to assemble every piece themselves.</p>
+    <div class="box">
+      <div class="label">In the message, you can clearly state</div>
+      <ul>
+        <li>Which concerns were addressed in the rebuttal.</li>
+        <li>Which reviewers were satisfied and explicitly confirmed that their concern was resolved.</li>
+        <li>Which reviewers updated their ratings or may still update them.</li>
+        <li>For reviewers who give you silent treatment: explain what concerns they raised initially, how you addressed them, and why those concerns are no longer a reasonable justification for keeping a low rating.</li>
+        <li>If a silent reviewer's concern contradicts the comment of another reviewer, point out the contradiction directly and briefly quote the other reviewer's statement. In particular, make full use of concerns that overlap across reviewers but were acknowledged by another reviewer as well addressed after rebuttal. This helps the AC see that most of the silent reviewer's concerns have already been resolved satisfactorily, even though that reviewer did not explicitly confirm them. <mark>Do not let one reviewer's silence make all of your rebuttal effort invisible.</mark></li>
+      </ul>
+    </div>
+    <p>The purpose of this message is not to drag the AC into a debate or replace the reviewers. They do not have time for that. It is to help them easily see which concerns have been resolved, which reviewers changed their assessments, and what disagreements remain in the review record.</p>
+
+    <h2><span class="n">6.</span>My strategy</h2>
+    <p>I was deeply shocked during my first few rebuttals. Shock was not enough; it felt like I was losing blood and tears over them (I really got a nosebleed because I was so furious haha). Gradually, I learned how to protect my emotions from bad reviewers. Or perhaps "learned" is not quite right. More precisely, I got used to it and accepted that this review system is broken. That is the first step: <mark>maintain your composure during the rebuttal phase</mark> so you can write responses that are soft and flexible, responses that do not make the reviewer feel you are attacking, retaliating against, or accusing them.</p>
+    <p>Even though the system is broken, I still need it. I need publications to graduate with my PhD. So, in the short term, I developed a lottery strategy: to win, you need more tickets. I started working harder and also using AI assistance to produce more papers. This ICLR, I have four first-author papers and one co-authored paper, of which only one is a resubmission. I know that this contributes to paper inflation and may push the review system toward an even worse state, but I need papers to graduate.</p>
+    <blockquote class="pull">Before peer review is reorganized, I do this to survive: acquire many lottery tickets.</blockquote>
+
+    <h2><span class="n">7.</span>Bonus: not every paper is worth rebutting</h2>
+    <p>Another point I want to share is that I do not choose to rebut every paper, especially when you have too many papers to handle at once. I focus rebuttal efforts on the papers with the highest ratings. All of them have average ratings above the venue average. Based on the venue's statistics, around 50% of papers at that level will be accepted. That seems like a good enough probability to make the effort worthwhile.</p>
+    <p>For the remaining papers, even when I believe I could address all of the reviewers' comments, I may decide not to rebut them. The reason is that getting one reviewer to raise their score by just one point can require a great deal of effort. If I have to persuade all three reviewers to raise their scores, I almost give up. Reviewers are also sometimes influenced by the opinions of others. If they see that the remaining reviewers all agree that the paper does not deserve acceptance, convincing each of them to change their minds becomes even harder. It is like the saying that <mark>breaking one chopstick is easy, but breaking three at once is difficult.</mark></p>
+    <p>In other words, when a paper is already perceived by a group of reviewers as weak, you do not just need to address individual concerns. You may have to change the group's collective perception of the paper.</p>
+    <p>So I think rebuttal also requires some strategy. Do not only look at how many comments you can answer. Consider whether the chance of changing the final result is worth the effort, especially when you also need to rebut other papers and rebuttal time is limited.</p>
+
+    <h2>The most important lessons I have learned</h2>
+    <p>If I had to choose the most important things to keep in mind during rebuttal, these would be them:</p>
+    <ul class="lessons">
+      <li><strong>Stay polite, but do not be afraid to stand firm when necessary.</strong> Be courteous and respectful to reviewers, even when they raise unreasonable comments. But for comments that seem to condemn the paper outright, do not hesitate to push back directly and defend your position. Politeness does not mean agreeing with everything a reviewer says.</li>
+      <li><strong>Try to predict reviewer behavior and choose the right strategy.</strong> If a reviewer has outsourced most of the review to an LLM, run your response through an LLM first because they may very well do the same. If a reviewer clearly has not put much effort into reading the paper or writing the review, they may also give you silent treatment during the discussion phase. In that case, write your responses mainly for the AC rather than expecting the reviewer to engage.</li>
+      <li><strong>Make the most of positive comments from other reviewers.</strong> This may be one of the most important tips. Do not focus only on defending the paper yourself. If another reviewer has acknowledged the paper's strengths or confirmed that a concern was addressed satisfactorily, use those comments. They can be just as persuasive, and sometimes even more persuasive, than arguments that come directly from you.</li>
+      <li><strong>Take the initiative with silent reviewers.</strong> Near the end of the rebuttal phase, summarize the concerns this reviewer raised that were addressed and acknowledged by other reviewers. Point out the overlap and quote a short corresponding comment. The goal is to help the AC see that these weaknesses are no longer unresolved, even if the original reviewer never responded.</li>
+      <li><strong>Do not forget to ask a satisfied reviewer to raise their rating.</strong> If a reviewer says that your response addressed their concerns but has not changed their rating, politely remind them to reconsider the rating.</li>
+      <li><strong>Write a short rebuttal summary specifically for the AC.</strong> Focus especially on reviewers who did not raise their scores. Summarize their main concerns, explain how you addressed them, identify which reviewers acknowledged the resolution, and explain why the remaining concerns should not be grounds for rejection. Do not assume that the AC will read everything and connect all the dots themselves. Do that work for them.</li>
+      <li><strong>Choose carefully which papers are worth rebutting.</strong> If you have too many papers to rebut at once, prioritize the papers with a realistic chance of acceptance. Convincing one reviewer to raise a score by one point is already difficult, let alone convincing a group of reviewers who share the same negative view.</li>
+      <li><strong>Do not create additional weaknesses in your rebuttal.</strong> Sometimes an author explains too enthusiastically and unintentionally brings up new issues that the reviewer had not considered before. Answer the central concern and avoid lengthy explanations of things that are not needed.</li>
+    </ul>
+    <p>Finally, remember that rebuttal is not just about answering comments. You are trying to change how reviewers view the paper while giving the AC enough information to make the right decision. In a system where you do not know who has actually read your response, who has asked an LLM to read it on their behalf, or whether the AC has read the rebuttal, a good response may still not be enough.</p>
+    <div class="callout"><p><strong>You also need to make sure that your effort is visible.</strong></p></div>
+  </article>
+
+  <!-- ===================== TIẾNG VIỆT ===================== -->
+  <article id="vi" lang="vi" hidden>
+    <h1>Một vài kinh nghiệm rebuttal trong thời LLM-assisted Peer Review</h1>
+    <p class="lede">Mình thấy peer review gần đây hên xui như lottery, do viết paper trở nên quá dễ, số lượng paper bùng nổ, số lượng quality reviewer thì không bùng nổ tương xứng. Nhưng khi mà ngày càng nhiều reviewer sử dụng LLM để hỗ trợ review paper, rebuttal đôi khi còn trở nên thú vị hơn nữa @@.</p>
+    <p>Mình đã bị reject rất nhiều lần, và chính từ những lần rebuttal thất bại mà mình học được các kinh nghiệm dưới đây. Hiện tại mình đang rebut cho 5 papers submitted to ICLR '27. Trải nghiệm gần đây khiến mình có impression là hành vi của reviewer thay đổi rất nhanh, chỉ vài 3 đến 4 tháng thôi: so với NeurIPS gần nhất, reviewer behavior ở ICLR này đã thay đổi khá rõ rệt.</p>
+    <p>Mình nhận ra rebuttal không đơn thuần là việc trả lời các concerns của reviewer. Bạn còn cần hiểu reviewer của mình là ai, họ thực sự quan tâm đến điều gì, họ có đọc và hiểu response của bạn hay không, và quan trọng nhất, <mark>làm thế nào để AC nhìn thấy được bức tranh toàn cảnh.</mark></p>
+    <p>Dưới đây là một vài kinh nghiệm cá nhân của mình, đơn giản là những gì mình quan sát được và thấy khá hữu ích.</p>
+
+    <h2><span class="n">1.</span>Đừng vội trả lời từng reviewer. Hãy nhìn vào bức tranh tổng thể trước.</h2>
+    <p>Khi nhận được reviews, việc đầu tiên mình làm là đọc tất cả comments một lượt, chưa vội viết response cho bất kỳ reviewer nào. Mình thường take note lại toàn bộ strengths và weaknesses mà từng reviewer đề cập. Mục đích là để có một bức tranh tổng thể về paper dưới góc nhìn của tất cả reviewers, đồng thời ghi nhớ ai đang đánh giá paper tốt ở điểm nào và ai đang có concerns ở điểm nào.</p>
+    <p>Một điều mình đặc biệt chú ý là <strong>những điểm mà các reviewers có ý kiến trái ngược nhau.</strong></p>
+    <p>Ví dụ, hai reviewers appreciate method novelty của paper, nhưng reviewer #2 lại cho rằng method của mình không có novelty. Trong trường hợp này, mình sẽ note lại ngay. Khi response cho concern về novelty của reviewer #2, thay vì chỉ tự mình giải thích và defend method, <mark>mình có thể quote lại những nhận xét tích cực của hai reviewers còn lại.</mark></p>
+    <p>Cách này đôi khi hiệu quả hơn việc tự mình defense rất nhiều. Lý do khá đơn giản: mình không chỉ nói rằng method của mình có novelty, mà còn chỉ ra rằng những reviewer khác đã thực sự nhận ra điều đó. Điều này có thể khiến reviewer #2 cân nhắc lại liệu mình có đang bỏ sót điều gì không. Đồng thời, nó cũng giúp AC nhìn thấy rằng đây là một điểm có sự bất đồng giữa các reviewers, thay vì mặc định rằng đó là một weakness đã được xác lập. Nói cách khác, bạn đang tận dụng chính những đánh giá độc lập của reviewers để bổ sung cho lập luận của mình. Quan trọng hơn, việc này giúp AC dễ dàng định hình bức tranh tổng thể và so sánh quan điểm giữa các reviewers.</p>
+    <div class="callout"><p>Đừng quên rằng AC phải xử lý rất nhiều papers, và một rebuttal tốt cũng nên giúp họ làm công việc đó dễ dàng hơn.</p></div>
+
+    <h2><span class="n">2.</span>Hãy thử đánh giá reviewer của mình thuộc nhóm nào</h2>
+    <p>Đây là một bước mình nghĩ ngày càng quan trọng trong thời lắm thầy nhiều ma. Không phải reviewer nào cũng đọc paper theo cùng một cách, và cũng không phải ai cũng sẽ tham gia rebuttal phase với cùng một mức độ effort.</p>
+    <p>Mình thường chia reviewers thành một vài nhóm dựa trên cách họ viết review, những câu hỏi họ đặt ra và cách họ tương tác trong discussion phase.</p>
+
+    <div class="group-box g1">
+      <h3><span class="tag">Nhóm 1</span>Những reviewer thực sự đọc và hiểu paper</h3>
+      <p>Đây là nhóm reviewer mà mình thích nhất. Họ thực sự dành thời gian đọc paper, cố gắng hiểu contribution, suy nghĩ về những limitations và đưa ra những comments có chất lượng.</p>
+      <p>Một đặc điểm nhận dạng là họ thường đặt những câu hỏi rất sắc sảo, đúng vào những điểm đáng hỏi. Hoặc đôi khi họ hỏi những câu cực kỳ tầm thường, haha. Ý mình là những câu hỏi rất cụ thể, rất tự nhiên, phản ánh đúng quá trình một người đọc paper và nảy sinh thắc mắc. Nó không giống những câu hỏi mà GPT hay Claude thường tự động generate khi được yêu cầu review một paper.</p>
+      <p>Những reviewer này cũng có khả năng cao hơn sẽ tiếp tục tham gia discussion phase, cả với authors lẫn AC. Họ đã bỏ công đọc paper từ đầu, nên nhiều khả năng họ cũng sẽ dành thời gian đọc rebuttal và cân nhắc những lập luận mới của bạn.</p>
+    </div>
+
+    <div class="group-box g2">
+      <h3><span class="tag">Nhóm 2</span>Những reviewer để LLM review hộ</h3>
+      <p>Đây có lẽ là nhóm chiếm số đông hiện nay. Họ đưa paper của bạn cho LLM, yêu cầu nó review, sau đó sử dụng phần lớn những gì LLM generate làm review của mình. Hành vi này rất có thể tiếp tục trong rebuttal phase.</p>
+      <p>Hãy tưởng tượng: bạn viết một response rất dài, giải thích chi tiết từng concern. Reviewer có thể copy toàn bộ response của bạn vào LLM, yêu cầu nó đánh giá xem author đã address concerns hay chưa, rồi lại copy nguyên những gì LLM trả lời để viết discussion.</p>
+      <p>Họ làm như vậy vì ngay từ đầu, thay vì tự mình đọc và hiểu paper, họ đã để AI làm công việc đó. Đến rebuttal phase họ không hiểu rõ response của bạn, cách nhanh nhất vẫn là tiếp tục để AI làm việc thay mình.</p>
+      <p>Một đặc điểm nhận dạng có thể là review của họ rất nice và lịch sự, bởi vì đó cũng là cách LLM thường viết. Bạn đôi khi còn nhận thấy hai reviewers có comments rất giống nhau, bởi vì họ có thể đều đang sử dụng LLM và nhận được những nhận xét tương tự.</p>
+      <p>Tất nhiên, việc sử dụng LLM không đồng nghĩa với việc reviewer không có năng lực hay không thực sự quan tâm đến paper. Có những người sử dụng AI như một công cụ hỗ trợ rất tốt. Điều mình muốn nói ở đây là những reviewer gần như giao toàn bộ quá trình review cho LLM.</p>
+    </div>
+
+    <div class="group-box g3">
+      <h3><span class="tag">Nhóm 3</span>Những reviewer dùng LLM nhưng đã muốn reject paper của bạn từ đầu</h3>
+      <p>Đây là một nhóm khá khó chịu.</p>
+      <p>Reviewer đã hình thành định kiến ban đầu, rồi dùng LLM để tìm ra bằng chứng hỗ trợ cho kết luận reject. Lúc này AI trở thành công cụ để vạch lá tìm sâu, củng cố bias, thay vì là một công cụ đánh giá trung lập. Họ có thể tiếp tục prompt LLM theo những hướng ngày càng tiêu cực, cho đến khi tìm được một vấn đề nào đó có vẻ không ổn trong paper.</p>
+      <p>Một đặc điểm nhận dạng là comments đôi khi khá toxic và thiếu trọng tâm. Chẳng hạn, họ có thể bỏ qua những chi tiết quan trọng trong introduction, bỏ qua main tables, nhưng lại nhảy đến một comment về Table 16 ở trang 30 của paper. :)</p>
+      <p>Cảm giác như họ đang cố gắng đào bới một vấn đề nào đó thay vì thực sự đánh giá contribution của paper.</p>
+    </div>
+
+    <div class="group-box g4">
+      <h3><span class="tag">Nhóm 4</span>Những reviewer không dùng LLM, nhưng cũng không thực sự dành effort để đọc paper</h3>
+      <p>Đây là một nhóm mình khá hay gặp trong lĩnh vực AI for Science. Mỗi lần submit paper mình lại gặp một reviewer như vậy.</p>
+      <p>Họ có thể cho paper của bạn 1 điểm và họ rất tự tin vào đánh giá của họ, nhưng phần comments lại rất trống rỗng. Những criticisms thường xoay quanh các fundamental limitations của cả một research field, rồi được dùng để đánh giá paper của bạn.</p>
+      <p>Ví dụ, họ phê phán paper không có wet-lab evaluation, mặc dù 99% papers được submit vào cùng venue cũng không có wet-lab evaluation.</p>
+      <p>Cảm giác là họ không thực sự bỏ nhiều effort để đọc và hiểu paper của bạn, nhưng vẫn rất tự tin đưa ra đánh giá của mình.</p>
+      <p>Mình đoán những reviewer này đôi khi là researchers từ một field khác, có tên trong danh sách co-authors của nhiều papers nên được phân công review, hoặc là những giáo sư hay những người trong industry, họ quá bận và không có thời gian đọc paper của bạn.</p>
+      <p>Họ có thể không dùng LLM để đọc paper, họ tự viết comment, nhưng không có nghĩa là review của họ có chất lượng tốt.</p>
+    </div>
+
+    <div class="group-box g5">
+      <h3><span class="tag">Nhóm 5</span>Những reviewer muốn lấy Best Reviewer Award</h3>
+      <p>Nhóm này khá hiếm, nhưng mình nghĩ họ là những reviewer đáng quý nhất. Họ thực sự muốn làm một reviewer tốt. Họ có thể đọc hiểu paper rất kỹ, đi hết appendix, kiểm tra code, reproduce experiments và xác minh xem mọi thứ có thực sự transparent như authors claim hay không.</p>
+      <p>Với AI agents thì việc một reviewer reproduce experiments của bạn không còn quá khó, mình cũng gặp những reviewer kiểu này ngày càng nhiều. Tiếng nói của họ rất có trọng lượng, vì họ không chỉ đưa ra nhận xét mà còn chủ động kiểm chứng nhiều claims trong paper. Họ có thể actively discuss với authors, tham gia reviewer discussion và thậm chí tiếp tục trao đổi với AC.</p>
+      <p>Nếu gặp những reviewer như vậy, bạn sẽ khá vất vả trong rebuttal (nếu từ đầu bạn chuẩn bị chưa tốt). Nhưng mình nghĩ họ là những golden reviewers. Họ thực sự quan tâm đến việc đánh giá paper một cách khách quan, và việc trở thành một reviewer tốt có ý nghĩa với họ.</p>
+    </div>
+
+    <h2><span class="n">3.</span>Biết reviewer thuộc nhóm nào để lựa chọn chiến thuật rebuttal phù hợp</h2>
+    <p>Sau khi đã có một bức tranh tương đối về từng reviewer, mình nghĩ cách viết rebuttal cũng nên được điều chỉnh tương ứng.</p>
+
+    <h3><span class="tag g1">Nhóm 1</span>Hãy rebuttal đúng nghĩa</h3>
+    <p>Với những reviewer thực sự đọc và hiểu paper, bạn nên tập trung vào việc address concerns của họ bằng arguments, explanations hoặc additional experiments nếu cần thiết.</p>
+    <p>Hãy sử dụng giọng điệu mềm mỏng, respectful và đi thẳng vào trọng tâm. Đừng cố viết những response dài dòng chỉ để nghe có vẻ thuyết phục. Những reviewer này hiểu paper của bạn, nên họ cũng sẽ nhận ra ngay nếu bạn đang nói vòng vo hoặc không thực sự trả lời câu hỏi.</p>
+    <p>Một điều mình muốn nhấn mạnh là nhiều authors hiện nay cũng sử dụng LLM để viết rebuttal. Điều này không có gì sai, nhưng đôi khi LLM generate những câu trả lời nghe rất hay mà lại không thực sự address đúng concern của reviewer. <mark>Đừng để reviewer có cảm giác rằng chính bạn cũng không rõ mình đang nói gì.</mark></p>
+    <p>Với nhóm reviewer này, cơ hội để họ thực sự engage trong rebuttal phase tương đối cao. Nếu paper của bạn đủ tốt và những concerns của họ có thể được giải quyết, bạn hoàn toàn có cơ hội thay đổi quan điểm của họ.</p>
+
+    <h3><span class="tag g2">Nhóm 2</span>Hãy chuẩn bị response cho cả LLM</h3>
+    <p>Với những reviewer gần như giao việc review cho LLM, bạn vẫn cần viết response thật rõ ràng và cẩn thận.</p>
+    <p>Nhưng có một việc mình nghĩ bạn nên làm: <mark>chạy response của mình qua LLM trước.</mark> Hãy thử mimic chính xác những gì reviewer có thể làm. Đưa original review và response của bạn vào LLM, yêu cầu nó đánh giá xem các concerns đã được address hay chưa, và xem liệu nó có tiếp tục đưa ra những criticisms mới không.</p>
+    <p>I know it's stupid. Bạn sẽ có cảm giác mình đang rebut một LLM thay vì một con người. But it is what it is. Nếu reviewer sử dụng LLM để đánh giá response của bạn, thì việc chuẩn bị một response mà LLM có thể hiểu đúng và đánh giá tích cực cũng là một chiến thuật hợp lý.</p>
+
+    <h3><span class="tag g3">Nhóm 3</span>Mềm mỏng trong cách diễn đạt, nhưng cứng rắn trong lập luận</h3>
+    <p>Với những reviewer dường như đã muốn reject paper của bạn từ đầu, mình nghĩ bạn cần đặc biệt cẩn thận.</p>
+    <p>Hãy cảm ơn họ thật lịch sự và thể hiện rằng bạn nghiêm túc xem xét những concerns của họ. Nhưng với những criticisms thiếu cơ sở hoặc có phần unreasonable, bạn cũng cần kiên quyết bảo vệ quan điểm của mình.</p>
+    <p>Đặc biệt, nếu có những nhận xét tích cực từ các reviewers khác có thể hỗ trợ lập luận của bạn, hãy tận dụng chúng.</p>
+    <p>Lý do là reviewer thuộc nhóm này có thể không thực sự có ý định thay đổi quan điểm, bất kể bạn giải thích thuyết phục đến đâu. Nếu bạn trả lời quá mềm mỏng và chỉ liên tục cố gắng chiều theo họ, họ có thể tiếp tục đào bới những vấn đề khác nếu còn bất kỳ thứ gì để tìm. Mặt khác, bạn cũng không muốn khiến họ cảm thấy bị tấn công và trở nên aggressive hơn trong discussion phase với AC.</p>
+    <blockquote class="pull">Vì vậy, chiến thuật của mình là: mềm mỏng trong cách diễn đạt, nhưng cứng rắn trong lập luận.</blockquote>
+    <p>Hãy nhớ rằng rebuttal không chỉ viết cho reviewer này đọc. AC cũng sẽ đọc nó. Mục tiêu là để AC nhận ra rằng bạn đã nghiêm túc address concerns, đồng thời có thể tự đánh giá xem những criticisms còn lại có thực sự hợp lý hay không.</p>
+
+    <h3><span class="tag g4">Nhóm 4</span>Viết cho AC nhiều hơn là cho reviewer</h3>
+    <p>Với những reviewer không thực sự dành effort để đọc hiểu paper, mình không kỳ vọng họ sẽ dành thời gian đọc rebuttal của bạn. Và yeah, bạn sẽ nhận được silent treatment.</p>
+    <p>Chiến thuật của mình vẫn là lịch sự, nhưng phải thật cứng rắn khi bảo vệ những điểm quan trọng, đặc biệt là những điểm mà họ sử dụng để justify rating rất thấp.</p>
+    <p>Again, hãy tận dụng những đánh giá tích cực của reviewers khác nếu có thể.</p>
+    <p>Một tip mình nghĩ khá hữu ích là trong author-reviewer discussion phase, nếu một reviewer khác đưa ra thêm một nhận xét có lợi cho paper của bạn, và nhận xét đó có thể giúp giải quyết concern của reviewer này, <mark>hãy viết một response mới để chỉ ra điều đó.</mark> Kể cả khi reviewer kia vẫn im như hến.</p>
+    <p>Bạn không nhất thiết phải viết response chỉ để thuyết phục reviewer đó. Đôi khi mục đích quan trọng hơn là giúp AC nắm được toàn bộ tình hình và không bỏ sót những thông tin có lợi cho paper của bạn.</p>
+
+    <h3><span class="tag g5">Nhóm 5</span>Chuẩn bị thật tốt trước khi submit paper</h3>
+    <p>Với những reviewer thực sự tận tâm và có khả năng reproduce experiments, cách đối phó tốt nhất không phải là một chiến thuật rebuttal đặc biệt nào cả. Mà là chuẩn bị thật tốt ngay từ trước khi submit.</p>
+    <p><mark>Mọi thứ phải consistent, từ paper đến code.</mark> Hãy log lại toàn bộ experiments, ít nhất là những experiments được sử dụng trong main tables. Đảm bảo code thực sự implement đúng những gì được mô tả trong method, chạy được và sinh ra kết quả giống hoặc gần giống với những gì bạn viết trong paper. Đừng để xảy ra tình huống reviewer chạy code và phát hiện rằng implementation không đúng với method, hoặc kết quả reproduce khác xa main tables mà bạn không thể giải thích.</p>
+    <p>Rebuttal với họ có thể hơi mệt, nhưng mình nghĩ đây là nhóm reviewer mà bạn nên trân trọng nhất.</p>
+
+    <h2><span class="n">4.</span>Reviewer nói satisfied không có nghĩa là họ sẽ raise score</h2>
+    <p>Đây là một điều khá đáng buồn T_T</p>
+    <p>Ngay cả khi bạn đã address tất cả comments một cách thỏa đáng, việc reviewer có đồng ý raise score hay không vẫn phụ thuộc rất nhiều vào quan điểm và ý định ban đầu của họ. Có thể họ cảm thấy paper chưa đủ tốt về mặt fundamental, dù tất cả những concerns cụ thể đã được giải quyết. Hoặc đơn giản là họ không muốn thay đổi rating của mình. Hoặc vì một lý do trời ơi như trong trường hợp này của mình:</p>
+    <p>Cả bốn reviewers đều cho weak reject. Mình cố gắng address toàn bộ comments của họ trong rebuttal. Sau đó, cả bốn đều nói rằng họ đã satisfied với responses của mình. <strong>Nhưng không ai raise score.</strong> Lúc đó mình nghĩ mọi thứ có vẻ khá tốt đẹp. AC sẽ đọc discussion, thấy rằng tất cả reviewers đều đã acknowledge concerns được giải quyết, và có lẽ sẽ accept paper. Nhưng cuối cùng paper vẫn bị reject.</p>
+    <p>Mình không biết chính xác điều gì đã xảy ra, nhưng đoán là có thể AC không đọc kỹ rebuttal và discussion. Vụ này là NeurIPS '26, điểm đặc biệt của venue này là AC viết meta review trước rebuttal phase, nói rõ những việc mình cần làm để họ accept paper của mình. Thế là các reviewer khác cảm thấy AC đã made up their mind nên họ chẳng buồn raise rating. Thế nhưng AC lại nhìn vào ratings cuối cùng, thấy không có reviewer nào tăng điểm, rồi kết luận rằng rebuttal không đủ thuyết phục. Điều đáng buồn là những reasons được viện ra để reject paper lại chính là những concerns mà mình đã address trong rebuttal. Có lẽ ngay từ đầu AC đã dùng LLM để viết meta review, rồi đến cuối cùng chỉ nhìn rating để đánh giá.</p>
+    <p>Đây cũng là lý do mình nghĩ việc thực sự nudge được reviewers raise score là cực kỳ quan trọng. Bạn không chỉ cần họ nói rằng họ đã hiểu hoặc đã hài lòng với response, mà tốt nhất là họ cần thể hiện điều đó bằng rating của mình. Bởi vì bạn không biết AC sẽ đọc rebuttal kỹ đến đâu.</p>
+    <div class="callout"><p>Đừng mặc định rằng một reviewer nói "Thank you, this addresses my concerns" đồng nghĩa với việc họ sẽ tăng điểm. <strong>Bạn hãy nudge họ nếu họ nói vậy mà điểm chưa tăng.</strong></p></div>
+
+    <h2><span class="n">5.</span>AC: Nhân tố quan trọng nhất và cũng bí ẩn nhất</h2>
+    <p>Cuối cùng, chúng ta phải nói về AC. AC là nhân tố khó đoán nhất trong toàn bộ peer review process.</p>
+    <p>Có rất nhiều AC làm việc siêu có trách nhiệm. Họ thực sự đọc reviews, rebuttal và discussion, sau đó tự đưa ra đánh giá của mình dựa trên toàn bộ thông tin có được.</p>
+    <p>Nhưng cũng có những AC lạm dụng LLM, giao phần lớn quá trình đánh giá cho AI vì số lượng paper mà họ phải handle là quá lớn.</p>
+    <p>Nếu may mắn gặp được một AC thực sự đọc và hiểu rebuttal của bạn, mọi thứ có thể diễn ra khá công bằng. Họ sẽ nhận ra những concerns nào đã được giải quyết, những disagreements nào giữa reviewers chưa được làm rõ, và tự mình đánh giá paper dựa trên những thông tin đó.</p>
+    <p>Nhưng nếu không may mắn, AC có thể chỉ nhìn vào những ratings cuối cùng, chọn ra một vài weaknesses mà reviewers đã đề cập để justify quyết định reject, bất kể những weaknesses đó thực ra đã được address trong rebuttal hay chưa.</p>
+    <p>Đây là lý do mình quay lại một điểm đã nhắc ở trên: <mark>rebuttal không chỉ dành cho reviewers.</mark> Bạn cần viết sao cho AC có thể dễ dàng hiểu được toàn bộ tình hình, kể cả khi họ không đọc từng dòng trong response của bạn.</p>
+    <p>Và quan trọng nhất, hãy cố gắng khiến reviewers thực sự raise score nếu bạn có thể.</p>
+    <p>Bạn không thể kiểm soát AC sẽ đọc rebuttal kỹ đến đâu. Nhưng ít nhất, nếu reviewers đã thay đổi ratings, bạn sẽ có thêm một lợi thế trong trường hợp AC chỉ nhìn vào rating để đưa ra quyết định.</p>
+    <p>Một tip nhỏ mình nghĩ khá hữu ích là, trước khi kết thúc author-reviewer discussion phase, <strong>hãy viết riêng một message tóm tắt tình hình cho AC.</strong> Lúc này AC có thể đã review rất nhiều paper, hoặc còn phải tổng hợp hàng loạt ý kiến trong discussion. Một message ngắn, có cấu trúc sẽ giúp họ nhìn thấy phần work đã hoàn thành thay vì phải tự mình ghép từng mảnh.</p>
+    <div class="box">
+      <div class="label">Trong message, bạn có thể lần lượt ghi rõ</div>
+      <ul>
+        <li>Những concern nào đã được address trong rebuttal.</li>
+        <li>Reviewer nào đã satisfied và có comment xác nhận concern đã được giải quyết.</li>
+        <li>Reviewer nào đã cập nhật, hoặc có khả năng cập nhật, rating sau discussion.</li>
+        <li>Reviewer có silent treatment: với reviewer này, điểm nào họ raise ban đầu rồi bạn đã address như thế nào, và tại sao concern của họ không còn là lý do hợp lý để giữ rating thấp. Với những concerns mà reviewer này raised nhưng lại trái ngược với nhận xét của reviewer khác, hãy chủ động chỉ ra sự mâu thuẫn đó và trích dẫn ngắn nhận xét tương ứng của reviewer kia. Đặc biệt, hãy tận dụng tối đa những concerns bị overlap giữa các reviewers nhưng đã được reviewer khác acknowledge là well addressed sau rebuttal. Điều này giúp AC thấy rằng những concerns của reviewer im lặng, dù chưa được chính họ xác nhận, phần lớn đã được giải quyết ổn thỏa. <mark>Đừng để sự im lặng của một reviewer khiến những nỗ lực rebuttal của bạn trở nên vô hình.</mark></li>
+      </ul>
+    </div>
+    <p>Mục đích của message không phải để kéo AC vào tranh luận thay reviewers, họ không có thời gian để làm việc ấy, mà để giúp họ dễ dàng nhìn thấy những concerns đã được giải quyết, những reviewer đã cập nhật đánh giá, và những disagreement còn lại trong toàn bộ hồ sơ review.</p>
+
+    <h2><span class="n">6.</span>Chiến thuật của mình</h2>
+    <p>Mình đã từng rất shock trong những lần đầu rebuttal báo. Shock thôi còn không đủ, nó lấy cả máu cả nước mắt của mình (mình tức đến chảy máu cam haha). Dần dần mình học được cách bảo vệ cảm xúc của mình trước những reviewer tồi. Nói là mình học được cũng không đúng, chính xác là mình đã quen và chấp nhận review system này đang broken. Đấy là bước đầu tiên: <mark>phải giữ được tinh thần trong rebuttal phase</mark>, để mà viết ra những response mềm mỏng, linh hoạt, không khiến reviewer cảm thấy mình đang tấn công, trả đũa, hay buộc tội họ.</p>
+    <p>Hệ thống dù broken nhưng mình vẫn cần đến nó, vẫn cần KPI báo để tốt nghiệp PhD. Thế nên trong ngắn hạn, mình develop một chiến thuật chơi lottery: muốn thắng thì cần nhiều vé hơn. Mình làm việc chăm chỉ hơn, cộng với assist từ AI nữa thì mình có nhiều số lượng báo hơn. Kỳ ICLR này mình có 4 first author paper, 1 co-author paper, trong đó chỉ có 1 là resubmission. Mình biết làm vậy thì mình cũng đóng góp vào quá trình lạm phát paper và đẩy review system đến điểm tồi tệ hơn, maybe, nhưng mình phải có paper để tốt nghiệp.</p>
+    <blockquote class="pull">Trước khi có những thay đổi trong cách tổ chức peer review thì mình làm thế này để survive: có thật nhiều lottery ticket.</blockquote>
+
+    <h2><span class="n">7.</span>Bonus: Không phải paper nào cũng đáng để rebuttal</h2>
+    <p>Một điều nữa mình muốn chia sẻ là không phải paper nào mình cũng chọn để rebuttal, đặc biệt khi bạn có quá nhiều papers cần xử lý cùng lúc. Mình chỉ chọn những papers có ratings cao nhất để tập trung rebuttal. Tất cả đều có average rating là cao hơn average. Dựa trên statistics của venue, khoảng 50% những papers có mức điểm này sẽ được accept. Mình nghĩ đây là một tỷ lệ đủ tốt để đáng bỏ công sức ra chiến đấu.</p>
+    <p>Các papers còn lại, dù mình nghĩ hoàn toàn có thể address được hết comments của reviewers, mình vẫn quyết định không rebuttal. Lý do là vì việc khiến một reviewer raise score thêm 1 điểm đôi khi đã cần rất nhiều effort. Nếu phải thuyết phục cả 3 reviewers cùng tăng điểm thì mình gần như sẽ bỏ luôn. Đặc biệt, reviewers đôi khi có xu hướng bị ảnh hưởng bởi ý kiến của những người khác. Nếu họ thấy các reviewers còn lại đều đồng ý rằng paper này không đáng được accept, việc thuyết phục từng người một thay đổi quan điểm sẽ khó khăn hơn rất nhiều. Như kiểu <mark>bẻ một cây đũa thì dễ hơn bẻ ba cây cùng lúc</mark> ấy.</p>
+    <p>Nói cách khác, khi một paper đã rơi vào thế bị cả nhóm reviewers đánh giá thấp, bạn không chỉ cần address từng concern nữa, mà còn phải thay đổi cả collective perception của họ về paper.</p>
+    <p>Vì vậy, mình nghĩ rebuttal cũng cần có một chút strategy. Đừng chỉ nhìn vào việc mình có thể trả lời được bao nhiêu comments, mà hãy cân nhắc xem cơ hội thay đổi kết quả cuối cùng có đáng với effort bạn phải bỏ ra hay không, đặc biệt khi bạn cần rebuttal các paper khác nữa, mà thời gian rebuttal thì có hạn.</p>
+
+    <h2>Một vài điều quan trọng nhất mình rút ra</h2>
+    <p>Nếu phải chọn ra những điều quan trọng nhất khi rebuttal, thì đây là những gì mình muốn nhấn mạnh:</p>
+    <ul class="lessons">
+      <li><strong>Luôn giữ thái độ hòa nhã, nhưng đừng ngại cứng rắn khi cần thiết.</strong> Hãy lịch sự và tôn trọng reviewer, kể cả khi họ đưa ra những nhận xét không hợp lý. Nhưng với những comment mang tính triệt hạ paper, đừng ngại phản biện thẳng thắn và bảo vệ quan điểm của mình. Lịch sự không có nghĩa là phải đồng ý với tất cả những gì reviewer nói.</li>
+      <li><strong>Cố gắng đoán hành vi của reviewer để lựa chọn chiến thuật phù hợp.</strong> Nếu reviewer outsource gần như toàn bộ việc review cho LLM, hãy chạy response của bạn qua LLM trước, vì nhiều khả năng họ cũng sẽ làm đúng như vậy. Nếu reviewer gần như không bỏ effort để đọc paper và viết review, khả năng cao họ cũng sẽ cho bạn silent treatment trong discussion phase. Khi đó, hãy viết response chủ yếu để AC đọc, thay vì quá kỳ vọng reviewer sẽ phản hồi.</li>
+      <li><strong>Tận dụng tối đa những nhận xét tích cực từ các reviewers khác.</strong> Đây có lẽ là một trong những tips quan trọng nhất. Đừng chỉ tập trung tự mình defend paper. Nếu reviewer khác đã acknowledge strengths của paper hoặc xác nhận rằng một concern đã được address thỏa đáng, hãy tận dụng những nhận xét đó. Chúng có sức thuyết phục không kém, thậm chí đôi khi còn hơn những arguments do chính bạn đưa ra.</li>
+      <li><strong>Chủ động xử lý những reviewer im lặng.</strong> Cuối rebuttal phase, hãy tổng hợp lại những concerns mà reviewer này raised nhưng đã được address và acknowledge bởi những reviewers khác. Chỉ ra những điểm overlap và trích dẫn ngắn nhận xét tương ứng. Mục đích là để AC thấy rằng những weaknesses này thực ra không còn bị bỏ ngỏ, dù reviewer ban đầu chưa bao giờ phản hồi.</li>
+      <li><strong>Đừng quên nhắc reviewer raise rating nếu họ có vẻ đã hài lòng.</strong> Nếu reviewer nói rằng response của bạn đã address được concerns nhưng vẫn chưa thay đổi rating, đừng ngại lịch sự nhắc họ reconsider rating.</li>
+      <li><strong>Viết một rebuttal summary ngắn gọn dành riêng cho AC.</strong> Đặc biệt tập trung vào những reviewers chưa tăng điểm. Tóm tắt những concerns quan trọng của họ, bạn đã giải quyết như thế nào, reviewer nào đã acknowledge điều đó, và tại sao bạn nghĩ những concerns còn lại không nên là lý do để reject paper. Đừng mặc định AC sẽ tự đọc hết mọi thứ và nối các điểm lại với nhau. Hãy làm công việc đó giúp họ.</li>
+      <li><strong>Biết chọn paper nào đáng để bỏ công rebuttal.</strong> Nếu có quá nhiều papers cần rebuttal, hãy ưu tiên những paper có cơ hội accept thực tế hơn. Thuyết phục một reviewer tăng một điểm đã rất khó, huống chi phải thuyết phục cả một nhóm reviewers đang có cùng quan điểm tiêu cực.</li>
+      <li><strong>Đừng tự tạo thêm weaknesses trong rebuttal.</strong> Đôi khi author quá nhiệt tình giải thích, vô tình mở ra những vấn đề mới mà reviewer ban đầu còn chưa nghĩ tới. Hãy trả lời đúng trọng tâm, đừng giải thích dài dòng những thứ không cần thiết.</li>
+    </ul>
+    <p>Cuối cùng, hãy nhớ rằng rebuttal không chỉ là trả lời comments. Bạn đang cố gắng thay đổi cách reviewers nhìn nhận paper, đồng thời giúp AC có đủ thông tin để đưa ra quyết định đúng đắn. Trong một hệ thống mà bạn không biết ai thực sự đọc response của mình, ai đang nhờ LLM đọc hộ, hay AC có thực sự đọc rebuttal hay không, thì viết một response tốt thôi đôi khi vẫn chưa đủ.</p>
+    <div class="callout"><p><strong>Bạn còn phải đảm bảo rằng những nỗ lực của mình được nhìn thấy.</strong></p></div>
+  </article>
+  </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap" id="foot">Thanks for reading.</div>
+</footer>
+
+<script>
+/* group the article into glass cards: intro, each section, and each reviewer group / strategy inside */
+(function(){
+  function wrap(start,stop,cls){
+    var box=document.createElement(start.tagName==="H2"?"section":"div");box.className=cls;
+    start.parentNode.insertBefore(box,start);
+    var n=start;
+    while(n&&!(n!==start&&stop(n))){var next=n.nextElementSibling;box.appendChild(n);n=next;}
+  }
+  ["en","vi"].forEach(function(id){
+    var art=document.getElementById(id), h1=art.querySelector("h1");
+    if(h1.nextElementSibling&&h1.nextElementSibling.tagName!=="H2") wrap(h1.nextElementSibling,function(n){return n.tagName==="H2"},"glass");
+    [].slice.call(art.querySelectorAll(":scope > h2")).forEach(function(h){wrap(h,function(n){return n.tagName==="H2"},"glass")});
+    [].slice.call(art.querySelectorAll("section.glass > h3")).forEach(function(h){wrap(h,function(n){return n.tagName==="H3"||n.tagName==="H2"},"glass inner")});
+    [].slice.call(art.querySelectorAll(".group-box")).forEach(function(g){g.classList.add("glass","inner")});
+  });
+})();
+(function(){
+  var root=document.documentElement;
+  var T={en:{brand:"Rebuttal Lessons",foot:"Thanks for reading.",toc:"Contents"},vi:{brand:"Kinh nghiệm Rebuttal",foot:"Cảm ơn bạn đã đọc.",toc:"Mục lục"}};
+  var toc=document.getElementById("toc"), heads=[], links=[];
+  function buildToc(l){
+    heads=[].slice.call(document.querySelectorAll("#"+l+" h2"));
+    toc.innerHTML="";
+    var t=document.createElement("div");t.className="t";t.textContent=T[l].toc;toc.appendChild(t);
+    links=heads.map(function(h,i){
+      h.id=l+"-s"+i;
+      var a=document.createElement("a");a.href="#"+h.id;a.textContent=h.textContent;
+      a.addEventListener("click",function(e){e.preventDefault();h.scrollIntoView({behavior:"smooth"})});
+      toc.appendChild(a);return a;
+    });
+  }
+  function store(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+  function load(k){try{return localStorage.getItem(k)}catch(e){return null}}
+
+  function setLang(l,push){
+    if(l!=="en"&&l!=="vi") l="en";
+    document.getElementById("en").hidden=(l!=="en");
+    document.getElementById("vi").hidden=(l!=="vi");
+    root.lang=l;
+    document.getElementById("brand").textContent=T[l].brand;
+    document.getElementById("foot").textContent=T[l].foot;
+    document.querySelectorAll("[data-lang]").forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.lang===l))});
+    store("rb-lang",l);
+    buildToc(l);
+    if(push&&location.hash!=="#"+l) history.replaceState(null,"","#"+l);
+    onScroll();
+  }
+  function currentTheme(){
+    var t=root.getAttribute("data-theme");
+    if(t) return t;
+    return window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";
+  }
+  function paintTheme(){
+    var t=currentTheme();
+    document.querySelectorAll("[data-theme-btn]").forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.themeBtn===t))});
+  }
+  function setTheme(t){root.setAttribute("data-theme",t);store("rb-theme",t);paintTheme();}
+
+  document.querySelectorAll("[data-lang]").forEach(function(b){b.addEventListener("click",function(){setLang(b.dataset.lang,true);window.scrollTo({top:0})})});
+  document.querySelectorAll("[data-theme-btn]").forEach(function(b){b.addEventListener("click",function(){setTheme(b.dataset.themeBtn)})});
+  if(window.matchMedia) matchMedia("(prefers-color-scheme: dark)").addEventListener("change",paintTheme);
+
+  var bar=document.getElementById("progress");
+  function onScroll(){
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.width=(h>0?Math.min(100,window.scrollY/h*100):0)+"%";
+    var cur=-1;heads.forEach(function(el,i){if(el.getBoundingClientRect().top<140)cur=i});
+    links.forEach(function(a,i){a.classList.toggle("on",i===cur)});
+  }
+  window.addEventListener("scroll",onScroll,{passive:true});
+  window.addEventListener("resize",onScroll);
+  window.addEventListener("hashchange",function(){var h=location.hash.slice(1);if(h==="en"||h==="vi")setLang(h,false)});
+
+  var savedTheme=load("rb-theme");
+  if(savedTheme==="light"||savedTheme==="dark") root.setAttribute("data-theme",savedTheme);
+  paintTheme();
+  var h=location.hash.slice(1);
+  setLang(h==="en"||h==="vi"?h:(load("rb-lang")||"en"),false);
+  if(h==="en"||h==="vi") window.scrollTo(0,0);
+})();
+</script>
+
+</body>
+</html>
