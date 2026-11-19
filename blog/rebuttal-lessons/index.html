@@ -83,7 +83,9 @@ header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;backgrou
 .seg button{font-family:var(--title-font);font-weight:600;font-size:.78rem;letter-spacing:.04em;color:var(--muted);background:none;border:0;border-radius:999px;padding:.3rem .75rem;cursor:pointer}
 .seg button[aria-pressed="true"]{background:var(--c1);color:var(--on-accent)}
 .seg button:focus-visible{outline:2px solid var(--c1);outline-offset:2px}
-#progress{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:var(--c1)}
+#progress{position:fixed;left:0;top:env(safe-area-inset-top,0px);z-index:25;height:2px;width:0;background:var(--c1)}
+header.site{transition:transform .3s ease}
+header.site.away{transform:translateY(-110%)}
 
 /* two-column reading layout: sticky contents on the left, text on the right */
 .layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:64px}
@@ -170,7 +172,7 @@ footer{border-top:1px solid var(--rule);color:var(--muted);font-size:.85rem;padd
 }
 /* Lato has no Vietnamese accents on Google Fonts, so the Vietnamese text uses Nunito Sans, the closest match that has them */
 article:lang(vi){--body-font:"Nunito Sans","Segoe UI",-apple-system,BlinkMacSystemFont,Arial,system-ui,sans-serif;font-family:var(--body-font)}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.aurora span{animation:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}header.site{transition:none}.aurora span{animation:none}}
 </style>
 </head>
 <body>
@@ -191,8 +193,8 @@ article:lang(vi){--body-font:"Nunito Sans","Segoe UI",-apple-system,BlinkMacSyst
       </div>
     </div>
   </div>
-  <div id="progress"></div>
 </header>
+<div id="progress"></div>
 
 <div class="wrap">
   <figure class="cover" aria-hidden="true">
@@ -631,7 +633,12 @@ article:lang(vi){--body-font:"Nunito Sans","Segoe UI",-apple-system,BlinkMacSyst
   if(window.matchMedia) matchMedia("(prefers-color-scheme: dark)").addEventListener("change",paintTheme);
 
   var bar=document.getElementById("progress");
+  var site=document.querySelector("header.site"), lastY=window.scrollY;
   function onScroll(){
+    var y=window.scrollY;
+    if(y>lastY+4&&y>80) site.classList.add("away");
+    else if(y<lastY-4||y<=80) site.classList.remove("away");
+    lastY=y;
     var h=document.documentElement.scrollHeight-window.innerHeight;
     bar.style.width=(h>0?Math.min(100,window.scrollY/h*100):0)+"%";
     var cur=-1;heads.forEach(function(el,i){if(el.getBoundingClientRect().top<140)cur=i});
