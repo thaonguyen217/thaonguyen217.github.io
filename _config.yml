@@ -7,7 +7,7 @@ version: 2
 
 # Personal info
 name: Thao Nguyen
-title: CS Ph.D. student @ UIUC
+title: CS Ph.D. candidate @ UIUC
 email: thaotn2@illinois.edu
 # website: www.github.com/sproogen/resume-theme
 
@@ -58,7 +58,8 @@ about_content: | # this will include new lines to allow paragraphs
 
   I've interned at [Prescient Design](https://www.gene.com/scientists/our-scientists/prescient-design), [Genentech](https://www.gene.com/) / [Roche](https://www.roche.com/) (Summer 2026), and am currently interning at [Apodex](https://www.apodex.com/).
 
-  ***I am looking for an industry job position starting in 2027.***
+  ***I'm on the industry job market for 2027. [Get in touch](mailto:thaotn2@illinois.edu) if you would like to connect.***
+  {: .job-card}
 
 content:
   - title: Research interests # Title for the section
