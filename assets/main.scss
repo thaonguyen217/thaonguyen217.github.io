@@ -43,3 +43,219 @@ p, ul {
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(46, 51, 56, 0.08);
 }
+
+/* ---------- Top bar ---------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #E3E8EE;
+}
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 72px;
+}
+
+.wordmark {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: #333;
+  text-decoration: none;
+  &:hover, &:focus { color: #333; text-decoration: none; }
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 1.5rem;
+
+  a {
+    color: #666;
+    text-decoration: none;
+    &:hover { color: #477dca; }
+  }
+
+  .cv-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 18px;
+    color: #477dca;
+    font-weight: 500;
+    border: 1.5px solid #477dca;
+    border-radius: 999px;
+    transition: background-color 150ms ease, color 150ms ease;
+    &:hover, &:focus { background: #477dca; color: #fff; }
+  }
+}
+
+/* ---------- Intro ---------- */
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding-top: 48px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #E3E8EE;
+}
+
+.intro-text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.intro h1 {
+  margin: 0;
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  color: #333;
+}
+
+.intro-tagline {
+  margin: 10px 0 24px;
+  font-size: 2rem;
+  color: #477dca;
+}
+
+.intro-copy p {
+  line-height: 1.7;
+}
+
+.intro-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin-top: 18px;
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 4px 0;
+    color: #477dca;
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+}
+
+.intro-portrait {
+  flex: 0 0 240px;
+  width: 240px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ---------- Experience rows ---------- */
+.experience-list {
+  margin-top: 1.2rem;
+}
+
+.experience-row {
+  display: grid;
+  grid-template-columns: 1fr 1.65fr auto;
+  gap: 24px;
+  align-items: baseline;
+  padding: 18px 0;
+  border-top: 1px solid #E3E8EE;
+
+  p { margin: 0; }
+}
+
+.experience-org {
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+
+.experience-role {
+  font-size: 1.7rem;
+}
+
+.experience-detail {
+  margin-top: 4px !important;
+  font-size: 1.5rem !important;
+  color: #888;
+}
+
+.experience-date {
+  font-size: 1.5rem !important;
+  color: #888;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 767px) {
+  .header-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 12px 15px;
+    min-height: 0;
+  }
+  .site-nav {
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    font-size: 1.4rem;
+    .cv-button { padding: 3px 14px; }
+  }
+  html { scroll-padding-top: 120px; }
+
+  .intro {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 24px;
+    padding-top: 28px;
+  }
+  .intro h1 { font-size: 4rem; }
+  .intro-portrait {
+    flex-basis: auto;
+    width: 140px;
+    height: 140px;
+  }
+
+  .experience-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .experience-date { text-align: left; }
+}
+
+/* ---------- Dark mode (theme adds .dark to body on dark-mode systems) ---------- */
+.dark {
+  .site-header { background: rgba(34, 34, 34, 0.96); border-bottom-color: #3a3a3a; }
+  .wordmark, .wordmark:hover, .intro h1 { color: #e6e6e6; }
+  .site-nav a { color: #b5b5b5; }
+  .site-nav a:hover { color: #6f9be0; }
+  .site-nav .cv-button { color: #6f9be0; border-color: #6f9be0; }
+  .site-nav .cv-button:hover { background: #477dca; border-color: #477dca; color: #fff; }
+  .intro, .experience-row { border-color: #3a3a3a; }
+  .job-card { background: #2c3036; border-color: #3d444d; border-left-color: #6f9be0; }
+}

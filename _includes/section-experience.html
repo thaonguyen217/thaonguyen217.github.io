@@ -1,0 +1,12 @@
+<div class="experience-list">
+  {%- for item in include.content -%}
+    <article class="experience-row">
+      <h4 class="experience-org">{{ item.org | markdownify | remove: '<p>' | remove: '</p>' | strip }}</h4>
+      <div>
+        <p class="experience-role">{{ item.role | escape }}</p>
+        {%- if item.detail -%}<p class="experience-detail">{{ item.detail | escape }}</p>{%- endif -%}
+      </div>
+      <p class="experience-date">{{ item.date | escape }}</p>
+    </article>
+  {%- endfor -%}
+</div>

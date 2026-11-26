@@ -48,6 +48,35 @@ additional_links:
 # gtag: "UA-00000000-0"
 # google_analytics: "UA-00000000-0"
 
+# Header (top bar + intro)
+tagline: Agentic AI for drug and materials discovery
+cv_url: /files/CV_Thao.pdf
+nav:
+- title: About
+  url: /#about
+- title: Research
+  url: /#research-interests
+- title: Experience
+  url: /#professional-experience
+- title: Publications
+  url: /#selected-publications
+intro_links:
+- title: Google Scholar
+  icon: fas fa-graduation-cap
+  url: https://scholar.google.com/citations?hl=en&user=pJ47-Z4AAAAJ
+- title: CV
+  icon: far fa-file-pdf
+  url: /files/CV_Thao.pdf
+- title: Email
+  icon: far fa-envelope
+  url: mailto:thaotn2@illinois.edu
+- title: GitHub
+  icon: fab fa-github
+  url: https://github.com/thaonguyen217
+- title: Instagram
+  icon: fab fa-instagram
+  url: https://www.instagram.com/thao.papaya
+
 # About Section
 # about_title: About Me
 about_profile_image: images/2B601DC5-FB7B-4A6A-A1B7-99776841D633.jpeg
@@ -73,39 +102,45 @@ content:
       - Foundation models for molecular and protein representation
       - High-fidelity, interpretable molecular property prediction (e.g., solubility, functional groups)
 
-  - title: Experience # Title for the section
-    layout: list # Type of content section (list/text)
+  - title: Professional Experience
+    layout: experience
     content:
-    - layout: left
-      title: Intern @ Apodex
-      caption: Sep 2026 - Present
-      description: | # this will include new lines to allow paragraphs
-          Working as an intern at Apodex.
-    - layout: left
-      title: Intern @ Prescient Design, Genentech / Roche
-      caption: Summer 2026
-      description: | # this will include new lines to allow paragraphs
-          Interned at Prescient Design, Genentech / Roche.
-    - layout: left
-      title: Ph.D. student @ UIUC
-      caption: Aug - 2023 Present
-      description: | # this will include new lines to allow paragraphs
-          Started Ph.D in CS at UIUC, joined [BLENDER lab](https://blender.cs.illinois.edu/).
-    - layout: left
-      title: RA @ VISHC
-      caption: Jan 2022 - Jun 2023
-      description: | # this will include new lines to allow paragraphs
-          Started working at [VISHC](https://smarthealth.vinuni.edu.vn/) as a research assistant.
-    - layout: left
-      title: Internship @ VinBidata
-      caption: Jan 2021 - Dec 2022
-      description: | # this will include new lines to allow paragraphs
-          Started working at Medical Image Processing Department - [VinBigdata JSC](https://vinbigdata.com/en).
-    - layout: left
-      title: Undergrad
-      caption: Sep 2016 - Dec 2020
-      description: | # this will include new lines to allow paragraphs
-          Received BSc degree in Biomedical Engineering from [HUST](https://hust.edu.vn/).
+    - org: Apodex
+      role: Research Intern
+      detail: Agentic AI for drug discovery and repurposing · Remote
+      date: Sep 2026 – Present
+    - org: Prescient Design, Genentech / Roche
+      role: Research Intern
+      detail: AI-driven antibody design and optimization · South San Francisco, CA
+      date: Summer 2026
+    - org: UIUC
+      role: Graduate Research Assistant · Ph.D.
+      detail: "BLENDER Lab, MMLI, CABBI, IIDAI · Advisor: Heng Ji"
+      date: Aug 2023 – Present
+    - org: VISHC, VinUniversity
+      role: Research Assistant
+      detail: ECG-based cardiovascular disease classification
+      date: 2022 – 2023
+    - org: VinBigdata
+      role: Research Intern
+      detail: Medical Image Processing · Chest X-ray pathology detection
+      date: 2020 – 2021
+    - org: HUST
+      role: Undergraduate Research Assistant
+      detail: EEG and Rehabilitation Laboratory · Biomedical signal and image processing
+      date: 2017 – 2020
+
+  - title: Education
+    layout: experience
+    content:
+    - org: UIUC
+      role: Ph.D. Candidate in Computer Science
+      detail: "Advisor: Prof. Heng Ji"
+      date: Aug 2023 – Present
+    - org: HUST
+      role: B.S. in Electronics and Telecommunications Engineering
+      detail: "Specialization: Biomedical Engineering · Advisor: Prof. Phuc Ngoc Pham"
+      date: Aug 2016 – Dec 2020
 
   - title: Selected Publications # Title for the section
     layout: text # Type of content section (list/text)
